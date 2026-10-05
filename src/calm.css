@@ -63,8 +63,12 @@
 .reel-toggle { position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgb(255 255 255 / 70%); border-radius: var(--mrpj-radius-pill); background: rgb(252 250 246 / 86%); color: var(--mrpj-color-ink); box-shadow: 0 4px 16px rgb(43 37 33 / 12%); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
 .reel-toggle svg { width: 16px; height: 16px; fill: currentColor; }
 .reel-toggle[data-state="playing"] .icon-play, .reel-toggle[data-state="paused"] .icon-pause { display: none; }
-.article-heading { border-radius: var(--mrpj-radius-card); }
+.article-heading { overflow: hidden; border-radius: var(--mrpj-radius-card); }
 .article-figure img { border-radius: var(--mrpj-radius-image); }
+/* Same handwriting texture as the reading cards: one large fragment of the original letter. */
+.article-heading .article-glyph { --t: -30%; --r: -70%; --b: -40%; --l: 14%; inset: var(--t) auto auto var(--l); width: calc(100% - var(--l) - var(--r)); height: calc(100% - var(--t) - var(--b)); max-width: none; object-fit: contain; object-position: left center; opacity: .14; }
+.article-heading.blush .article-glyph { --t: -50%; --r: -90%; --b: -30%; --l: 2%; }
+.article-heading.sand .article-glyph { --t: -140%; --r: -30%; --b: -12%; --l: 22%; object-position: left bottom; }
 .article-takeaway { padding: 24px 28px; border: 0; border-radius: var(--mrpj-radius-panel); background: var(--mrpj-color-surface); }
 dialog { padding: 20px; border: 0; border-radius: var(--mrpj-radius-dialog); }
 #dialog-photo { border-radius: 16px; }
@@ -121,6 +125,9 @@ html { scroll-padding-bottom: 110px; }
   .faq { grid-template-columns: .8fr 1.2fr; gap: 80px; }
   .collection-grid { grid-auto-columns: min(44%, 360px); gap: 16px; margin-inline: -32px; padding-inline: 32px; scroll-padding-inline: 32px; }
   .collection-card figcaption { left: 14px; right: 14px; bottom: 14px; }
+  .article-heading .article-glyph { --t: -70%; --r: -8%; --b: -70%; --l: 52%; }
+  .article-heading.blush .article-glyph { --t: -110%; --r: -14%; --b: -50%; --l: 46%; }
+  .article-heading.sand .article-glyph { --t: -170%; --r: -4%; --b: -16%; --l: 60%; }
   .article-figure img { aspect-ratio: 2 / 1; object-position: var(--figure-position, center); }
   .footer { padding-top: 80px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 64px; }
