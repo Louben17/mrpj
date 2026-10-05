@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "design:tokens": "node scripts/generate-design-tokens.mjs",
+    "design:preview": "node scripts/preview-design.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",

@@ -34,6 +34,21 @@ Svíčky a výrobky zobrazuj pouze pomocí vlastních fotografií MRPJ. Žádné
 
 Fonty Manrope a Cormorant Garamond jsou hostované lokálně; licence jsou v `public/fonts/LICENSE-*.txt`. Web nepoužívá analytiku, externí fontové požadavky ani Instagram embed.
 
+## Designový manuál
+
+Základ pro další návrh webu je v [docs/DESIGN_MANUAL.md](docs/DESIGN_MANUAL.md): barvy, typografie, rozvržení, práce s vlastními fotografiemi, tlačítka a jejich stavy, galerie, navigace, pohyb a přístupnost. Směr je **současné řemeslné studio** s krémovou a hnědou, geometrickými titulky a přirozenými barvami výrobků.
+
+[docs/DESIGN_RESEARCH.md](docs/DESIGN_RESEARCH.md) obsahuje audit mrpj.cz a rozbor FRAMA, Earl of East, StudioSmall a ferm LIVING včetně zdrojů a omezení průzkumu.
+
+Číselné hodnoty mají jeden zdroj v [docs/design/tokens.json](docs/design/tokens.json). Po jejich změně přegeneruj CSS; vizuální ukázku otevři přes vlastní lokální server:
+
+```sh
+npm run design:tokens
+npm run design:preview
+```
+
+Ukázka běží na http://127.0.0.1:4174/ a nabízí přepínání barevného podkladu, tlačítka, detail vlastních fotografií, rozbalovací odpovědi a lokální validaci pole. Formulář neodesílá ani neukládá údaje. Jde o podklad pro další tvorbu, ne o veřejnou část webu; produkční build jej nezahrnuje. Postup zavedení nového vzhledu je na konci manuálu.
+
 ## Nasazení
 
 Repozitář: https://github.com/Louben17/mrpj

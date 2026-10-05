@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>MRPJ — vizuální manuál</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="tokens.css" />
+  <link rel="stylesheet" href="preview.css" />
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <header class="frame guide-header">
+    <a class="logo" href="#" aria-label="MRPJ — začátek manuálu"><img src="/images/logo-original.jpg" width="900" height="900" alt="MRPJ" /></a>
+    <nav aria-label="Sekce manuálu"><a href="#barvy">Barvy</a><a href="#typografie">Písmo</a><a href="#komponenty">Komponenty</a></nav>
+    <span class="version">Manuál / 01</span>
+  </header>
+  <main id="obsah">
+    <section class="frame introduction">
+      <div><p class="label">MRPJ · SOUČASNÉ ŘEMESLNÉ STUDIO</p><h1>Vlastní rukopis.<br />V každém detailu.</h1><p class="lead">Teplý papír. Přesná typografie. Barvy naší tvorby. Vizuální základ pro další podobu webu MRPJ.</p><div class="triple-line" aria-hidden="true"></div><p class="caption">Vizuální ukázka manuálu · 5. 10. 2026<br />Slouží k posouzení stylu a chování komponent.</p></div>
+      <div class="object-board"><img src="/images/mrpj-pastel.webp" width="360" height="640" alt="Skutečné pastelové nádoby MRPJ z profilu @mrpjcz" /><div class="object-caption"><span>Vlastní fotografie MRPJ</span><span>01 / Pastelové tóny</span></div></div>
+    </section>
+
+    <section id="barvy" class="frame section">
+      <div class="section-title"><span class="label">01 / BARVY</span><h2>Klidný rám.<br />Výraz dostanou výrobky.</h2><p>Neutrální základ s tmavou hnědou. Šalvějová a růžová jsou příležitostné plochy; terakota označuje odkazy a focus.</p></div>
+      <div class="swatches">
+        <div><span class="swatch paper"></span><h3>Papír</h3><code>#F4F0E8</code><p>Hlavní pozadí</p></div>
+        <div><span class="swatch ink"></span><h3>Inkoust</h3><code>#2B2521</code><p>Nadpisy a text</p></div>
+        <div><span class="swatch espresso"></span><h3>Espresso</h3><code>#493A30</code><p>CTA a kontakt</p></div>
+        <div><span class="swatch clay"></span><h3>Terakota</h3><code>#8D442F</code><p>Odkazy a focus</p></div>
+        <div><span class="swatch sage"></span><h3>Šalvěj</h3><code>#D8DEC7</code><p>Jemný akcent</p></div>
+        <div><span class="swatch blush"></span><h3>Růžová</h3><code>#EAD3CE</code><p>Alternativní akcent</p></div>
+      </div>
+      <fieldset class="background-picker"><legend>Vyzkoušej pozadí obsahového bloku</legend><label><input type="radio" name="background" value="paper" checked /> Papír</label><label><input type="radio" name="background" value="sage" /> Šalvěj</label><label><input type="radio" name="background" value="blush" /> Růžová</label></fieldset>
+      <div class="canvas" id="color-canvas"><span class="label">OD MATERIÁLU K DOMOVU</span><h3>Malý objekt, vlastní charakter.</h3><p>Tmavý text se čte na všech povolených plochách. Barevný podklad může zdůraznit jeden příběh bez změny barvy fotografie.</p><a class="button primary" href="#komponenty">Prohlédnout komponenty <span aria-hidden="true">→</span></a></div>
+    </section>
+
+    <section id="typografie" class="frame section">
+      <div class="section-title"><span class="label">02 / TYPOGRAFIE</span><h2>Geometrie, která<br />navazuje na logo.</h2><p>Manrope je hlavní rodina. Cormorant zůstává pro jednotlivé redakční momenty. Všechny fonty jsou uložené lokálně.</p></div>
+      <div class="type-grid"><div class="type-card"><span class="label">MANROPE / 400, 500, 600</span><p class="type-display">Svíčky a nádoby.<br />S vlastním rukopisem.</p><p class="alphabet">Á Č Ď É Ě Í Ň Ó Ř Š Ť Ú Ů Ý Ž<br />á č ď é ě í ň ó ř š ť ú ů ý ž</p><p>Čitelný text 16 px. Obyčejné věty, skutečné informace a místo pro naše barevné výrobky.</p></div><div class="type-card editorial-card"><span class="label">CORMORANT / REDAKČNÍ AKCENT</span><blockquote>„Každý kousek<br />má svůj rukopis.“</blockquote><p>Ukázka typografické polohy, nikoli citace zákazníka. Serif používat střídmě; navigace a titulky zůstávají geometrické.</p></div></div>
+      <div class="scale-row"><span>H1 40–72 px</span><span>H2 32–48 px</span><span>Text 16 px</span><span>CTA 14 px</span><span>Popisek 12 px</span></div>
+    </section>
+
+    <section id="komponenty" class="frame section">
+      <div class="section-title"><span class="label">03 / OVLÁDÁNÍ</span><h2>Jednoduchá akce.<br />Jasná odezva.</h2><p>Vyzkoušej hover, klávesnici a dotyk. Primární tlačítko patří jednomu hlavnímu kroku v sekci.</p></div>
+      <div class="component-panel"><p class="label">TLAČÍTKA A ODKAZY</p><div class="button-row"><a class="button primary" href="#galerie">Prohlédnout svíčky <span aria-hidden="true">→</span></a><a class="button secondary" href="#pece">Jak o ně pečovat <span aria-hidden="true">→</span></a><button class="button primary" disabled>Připravuji ukázku</button><a class="text-link" href="https://www.instagram.com/mrpjcz/" target="_blank" rel="noopener noreferrer">Instagram @mrpjcz <span aria-hidden="true">↗</span></a></div><p class="caption">Neaktivní tlačítko pouze demonstruje stav. Navigační odkazy se nezakazují.</p></div>
+      <div class="component-panel dark"><p class="label">INVERZNÍ VARIANTA</p><h3>Barvy a světlo ze světa MRPJ.</h3><a class="button inverse" href="https://www.instagram.com/mrpjcz/" target="_blank" rel="noopener noreferrer">Sledovat @mrpjcz <span aria-hidden="true">↗</span></a><p class="caption">Na tmavém pozadí je focus světlý. Použij Tab a ověř jeho viditelnost.</p></div>
+    </section>
+
+    <section id="galerie" class="frame section">
+      <div class="section-title"><span class="label">04 / GALERIE</span><h2>Vlastní fotografie.<br />Bez cizích produktů.</h2><p>Kliknutí otevře celý vlastní snímek. Bez změny barev, generování detailu a zvětšování nad dostupné rozlišení.</p></div>
+      <div class="gallery-grid">
+        <figure><button class="photo-button" data-photo="mrpj-mramor.webp" data-title="Mramorovaná svíčka MRPJ" data-source="https://www.instagram.com/mrpjcz/reel/DNIyN_jMvi_/" aria-label="Otevřít fotografii mramorované svíčky"><img src="/images/mrpj-mramor.webp" width="361" height="640" alt="Mramorovaná nádoba MRPJ se svíčkou a víčkem" loading="lazy" /><span class="photo-action" aria-hidden="true">Prohlédnout +</span></button><figcaption><h3>Mramorování</h3><p>Každá kresba je trochu jiná.</p></figcaption></figure>
+        <figure><button class="photo-button" data-photo="mrpj-pastel.webp" data-title="Pastelové nádoby MRPJ" data-source="https://www.instagram.com/mrpjcz/reel/DMxvx0pseBy/" aria-label="Otevřít fotografii pastelových nádob"><img src="/images/mrpj-pastel.webp" width="360" height="640" alt="Zelené a růžové žebrované nádoby MRPJ" loading="lazy" /><span class="photo-action" aria-hidden="true">Prohlédnout +</span></button><figcaption><h3>Pastelové tóny</h3><p>Jemná barva, čisté linie.</p></figcaption></figure>
+        <figure><button class="photo-button" data-photo="mrpj-vyroba.webp" data-title="Ruční výroba MRPJ" data-source="https://www.instagram.com/mrpjcz/reel/DHY9tIIsP1M/" aria-label="Otevřít fotografii výroby svíčky"><img src="/images/mrpj-vyroba.webp" width="360" height="640" alt="Nalévání vosku do svíčky MRPJ" loading="lazy" /><span class="photo-action" aria-hidden="true">Prohlédnout +</span></button><figcaption><h3>Jak vzniká</h3><p>Skutečný detail naší výroby.</p></figcaption></figure>
+      </div>
+      <p class="caption">Současné soubory mají omezené rozlišení. Celoplošné obrazy připravit až z vlastních originálů.</p>
+    </section>
+
+    <section id="pece" class="frame section last-section">
+      <div class="section-title"><span class="label">05 / DALŠÍ PRVKY</span><h2>Méně hledání.<br />Více srozumitelnosti.</h2></div>
+      <div class="utility-grid"><div><h3>Rozbalovací odpověď</h3><details><summary>Platí stejná péče pro každý knot?<span aria-hidden="true"></span></summary><p>Pokyny se mohou lišit pro bavlněný a dřevěný knot. Vždy se řiď doporučením ke konkrétní svíčce.</p></details><details><summary>Odkud jsou fotografie?<span aria-hidden="true"></span></summary><p>Všechny výrobky na této stránce jsou vlastní MRPJ z profilu @mrpjcz. Původ je uložený v projektu.</p></details></div><div><h3>Stavy formuláře</h3><form id="demo-form" novalidate><label for="demo-email">E-mail pro ukázku validace</label><input id="demo-email" name="email" type="email" autocomplete="email" required aria-describedby="email-help email-error" /><p id="email-help" class="caption">Lokální demonstrace. Nic se neodesílá a adresa se neukládá.</p><p id="email-error" class="error" role="alert" hidden></p><button class="button secondary" type="submit">Vyzkoušet stav formuláře <span aria-hidden="true">→</span></button><p class="form-status" role="status" id="form-status"></p></form></div></div>
+    </section>
+  </main>
+  <footer class="frame guide-footer"><p>MRPJ · Designový manuál 1.0</p><a class="text-link" href="https://mrpj.cz/" target="_blank" rel="noopener noreferrer">Současný web ↗</a><span>Pravidla: docs/DESIGN_MANUAL.md</span></footer>
+  <dialog id="photo-dialog" aria-labelledby="photo-title"><div class="dialog-heading"><h2 id="photo-title">Fotografie MRPJ</h2><button class="icon-button" id="close-dialog" autofocus aria-label="Zavřít fotografii">×</button></div><img id="dialog-photo" alt="" /><a id="photo-source" class="text-link" target="_blank" rel="noopener noreferrer">Původní příspěvek na Instagramu ↗</a></dialog>
+  <script src="preview.js"></script>
+</body>
+</html>
