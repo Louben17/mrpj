@@ -1,0 +1,8 @@
+.git/
+.cache/
+artifacts/
+node_modules/
+dist/
+.env*
+logo1.jpg
+Snímek obrazovky *.png

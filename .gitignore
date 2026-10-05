@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.cache/
+.vercel/
+.env
+.env.*
+!.env.example
+artifacts/
+Snímek obrazovky *.png
+/logo1.jpg
