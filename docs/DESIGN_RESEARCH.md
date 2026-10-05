@@ -2,6 +2,8 @@
 
 Datum: 5. 10. 2026. Podklad pro [designový manuál](DESIGN_MANUAL.md).
 
+Audit zachycuje původní podobu MRPJ před redesignem z 5. 10. 2026. Zjištěné nedostatky sloužily jako podklad pro nové provedení; aktuální stav implementace je zaznamenaný na konci manuálu.
+
 ## Jak vznikl průzkum
 
 Prošel jsem živý web MRPJ, jeho HTML/CSS, logo a čtyři referenční weby. V prohlížeči jsem kontroloval první obrazovku a navazující obsah při šířce 1440 px; MRPJ také při 390 px. Pozorování vzhledu a měřené hodnoty jsou oddělené od doporučení, která jsou vlastním návrhem pro MRPJ. Průzkum neobsahuje uživatelské testování, analytiku ani měření obchodních výsledků referencí.

@@ -1,6 +1,6 @@
 # MRPJ — designový manuál webu
 
-Verze 1.0 · 5. 10. 2026 · výchozí specifikace pro další tvorbu. Manuál definuje nový směr; současný produkční web ještě tuto specifikaci plně nepoužívá.
+Verze 1.0 · 5. 10. 2026 · specifikace pro web a další tvorbu. Redesign z 5. 10. 2026 používá tento směr a společné tokeny v hlavním stylesheetu.
 
 Podklady: [průzkum a audit](DESIGN_RESEARCH.md), [hodnoty designu](design/tokens.json), [vizuální ukázka](design/index.html). Číselným zdrojem pro ukázku je `tokens.json`; `tokens.css` se z něj generuje. Ukázka je knihovna komponent, nikoli další návrh celého webu nebo produkční route.
 
@@ -213,10 +213,20 @@ Copy používá krátké přirozené věty, jednotné tykání a „my“ pro ro
 - Mobil nemá přeplněný úvod, oříznuté ovládání ani vodorovný scroll.
 - Build projde; ručně ověřit obraz, čitelnost a odkazy na reálném nasazení.
 
-Tyto body jsou pravidla pro další úpravy, nikoli tvrzení, že dnešní produkční web už splňuje celý nový systém.
+Tyto body používat také při každé další úpravě webu. Kontrola jednotlivých funkcí nenahrazuje úplný audit přístupnosti.
 
 ## 13. Ověření ukázky verze 1.0
 
 Kontrola 5. 10. 2026 v Chrome: šířky 320, 390, 768, 1024 a 1440 px bez vodorovného scrollu; na 390 px také text zvětšený na 200 %. Ověřeno přepínání podkladů, otevření/zavření fotografie, Tab uvnitř dialogu, Escape a návrat focusu, rozbalovací odpověď, chybový i platný stav lokálního pole a reduced motion. Fotografie v ukázce nepřekračují svou přirozenou šířku. Během těchto interakcí nevznikl externí síťový požadavek ani zápis do local/session storage.
 
 Textové dvojice z tabulky překračují 4,5 : 1; kontrolní hranice vůči paper/surface překračuje 3 : 1. Produkční build prošel. Tato kontrola není kompletní audit WCAG ani uživatelské testování. Pracovní snímky a protokol jsou v ignorované složce `artifacts/`.
+
+## 14. Zavedení do webu
+
+Redesign 5. 10. 2026 přebírá tokeny přímo přes CSS import. Hlavička, úvod, galerie, příběh, vosk a péče, kontakt i patička používají společnou typografii a paletu. Galerie nabízí celý snímek v nativním dialogu, otázky nativní `details` a navigace označuje aktuální sekci. Bez JavaScriptu zůstává navigace viditelná a fotografie odkazují na Instagram.
+
+Úvod má kratší nadpis „Svíčky a nádoby. Po našem.“ a menší obraz; na mobilu vynechává doplňkovou signaturu, aby galerie přišla dříve. Koláž barevných variant je vybraná jako konkrétní přehled barev, nikoli jako náhrada fotografie jediného produktu. Celý původní obraz zůstává dostupný v detailu.
+
+Produkční build byl ověřen v Chrome při šířkách 320, 390, 768, 1024 a 1440 px. Kontrola zahrnula menu a Escape, přechod z menu na nadpis sekce, všechny tři fotografie a způsoby zavření, Tab v dialogu, návrat focusu, rozbalovací odpovědi přes Enter/Space, odkazy na Instagram/e-mail, focus na tmavém podkladu, reduced motion, mobil bez JavaScriptu a zvětšení textu na 200 % při 390 px. Bez chyb JavaScriptu, neúspěšných požadavků na vlastní soubory a vodorovného scrollu.
+
+Větší fotografické bloky a exporty pro vyšší DPR čekají na vlastní originály s vyšším rozlišením. Další úpravy obsahu a rozšíření se dál řídí tímto manuálem.
