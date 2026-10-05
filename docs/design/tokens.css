@@ -24,7 +24,8 @@
   --mrpj-weight-control: 600;
   --mrpj-size-h1: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
   --mrpj-size-hero-caption: clamp(2rem, 1.25rem + 2vw, 3rem);
-  --mrpj-logo-duration: 3.2s;
+  --mrpj-logo-duration: 12s;
+  --mrpj-color-hero: #E5DED3;
   --mrpj-logo-stagger: 220ms;
   --mrpj-size-h2: clamp(2rem, 1.5rem + 2vw, 3rem);
   --mrpj-size-h3: clamp(1.375rem, 1.3125rem + 0.25vw, 1.5rem);

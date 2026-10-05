@@ -1,6 +1,8 @@
 @import './fonts.css';
 @import '../docs/design/tokens.css';
+@import './calm.css';
 
+@layer base {
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scrollbar-gutter: stable; }
 body { margin: 0; background: var(--mrpj-color-paper); color: var(--mrpj-color-ink); font: var(--mrpj-weight-body) var(--mrpj-size-body) / var(--mrpj-line-body) var(--mrpj-font-primary); -webkit-font-smoothing: antialiased; }
@@ -229,4 +231,5 @@ dialog::backdrop { background: rgb(43 37 33 / 65%); }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .logo-trace { stroke-dashoffset: 0; }
   .photo-button:hover .photo-image img, .photo-link:hover .photo-image img, .reading-card:hover .card-action > span { transform: none; }
+}
 }

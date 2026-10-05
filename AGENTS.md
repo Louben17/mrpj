@@ -2,6 +2,7 @@
 
 - Pracuj jen v této projektové složce. Používej existující repozitář `Louben17/mrpj` a Vercel projekt `mrpj`.
 - Vzhled: teplý minimalismus, krémová a hnědá, výrazná typografie. Zachovej logo dodané uživatelem.
+- Aktuální směr 2.1: klidné hero s pomalým bílým odhalením loga, bez horního loga; spodní plovoucí navigace, která se při scrollu schová a po zastavení vrátí. Kontakt a originální logo jsou v patičce. FAQ je nativní rozbalovací obsah. Pravidla 2.1 na začátku manuálu mají přednost před verzí 2.0.
 - Aktuální základ identity jsou původní vektorové křivky z `logo.pdf`, uložené v `src/brand/logo-source.svg`. Logo ani písmena znovu nekresli. Hero používá jednorázové vykreslení jeho linií; reduced motion zobrazí rovnou celé logo.
 - Veřejné stránky mají odkazovat na vlastní obsah. Články jsou na `/cteni/`; externí zdroje patří do `docs/ARTICLE_SOURCES.md`. Instagram je uvedený jako textový profil, kontakt vede na e-mail.
 - Domovská stránka a články se generují ze `src/templates/` a `src/content/articles.mjs` přes `npm run pages`. Neupravuj generované HTML ručně. Build generování spouští automaticky.

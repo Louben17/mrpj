@@ -1,51 +1,24 @@
-const toggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 const header = document.querySelector('.site-header');
-const desktop = window.matchMedia('(min-width: 768px)');
-
-document.documentElement.classList.add('js');
-toggle.hidden = false;
-
-function closeMenu() {
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.setAttribute('aria-label', 'Otevřít menu');
-  navigation.classList.remove('is-open');
-}
-toggle.addEventListener('click', () => {
-  const open = toggle.getAttribute('aria-expanded') !== 'true';
-  toggle.setAttribute('aria-expanded', String(open));
-  toggle.setAttribute('aria-label', open ? 'Zavřít menu' : 'Otevřít menu');
-  navigation.classList.toggle('is-open', open);
-});
 const navigationLinks = [...navigation.querySelectorAll('a')];
+let dockTimer;
+function showDock() { header.classList.remove('is-scrolling'); }
+window.addEventListener('scroll', () => {
+  clearTimeout(dockTimer);
+  if (scrollY > 40 && !header.contains(document.activeElement)) header.classList.add('is-scrolling');
+  else showDock();
+  dockTimer = setTimeout(showDock, 650);
+}, { passive: true });
+header.addEventListener('focusin', showDock);
 navigationLinks.forEach(link => link.addEventListener('click', () => {
-  const wasOpen = toggle.getAttribute('aria-expanded') === 'true';
-  closeMenu();
-  if (wasOpen) {
-    const heading = link.pathname === location.pathname && document.querySelector(`${link.hash} h2`);
-    if (heading) {
-      heading.setAttribute('tabindex', '-1');
-      requestAnimationFrame(() => heading.focus({ preventScroll: true }));
-    }
+  if (link.pathname !== location.pathname) return;
+  const target = document.querySelector(link.hash);
+  const heading = target?.querySelector('h1, h2');
+  if (heading) {
+    heading.setAttribute('tabindex', '-1');
+    requestAnimationFrame(() => heading.focus({ preventScroll: true }));
   }
 }));
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-    closeMenu();
-    toggle.focus();
-  }
-});
-header.addEventListener('focusout', event => {
-  if (event.relatedTarget && !header.contains(event.relatedTarget)) closeMenu();
-});
-document.addEventListener('click', event => {
-  if (!header.contains(event.target)) closeMenu();
-});
-desktop.addEventListener('change', () => {
-  const focusIsHidden = !desktop.matches && navigation.contains(document.activeElement);
-  closeMenu();
-  if (focusIsHidden || (desktop.matches && document.activeElement === toggle)) header.querySelector('.brand').focus();
-});
 
 // Links remain usable without JavaScript; enhancement uses native buttons.
 const dialog = document.querySelector('#photo-dialog');

@@ -1,5 +1,21 @@
 # MRPJ — web vycházející z křivek loga
 
+## Aktuální zadání 2.1 — klidný úvod a spodní navigace
+
+Tato pravidla mají přednost před popisem verze 2.0 níže. Uživatel chce další vývoj po menších částech; nyní upravujeme úvod, navigaci, patičku a FAQ.
+
+- Hero: čistá vysoká plocha v teplé barvě `color-hero`, velmi jemné světelné přechody. Bílé původní logo nad středově zarovnaným titulkem a jedním textovým CTA. Bez fotografie v úvodu a bez malého loga nahoře.
+- Animace: jeden měkký přechod zleva doprava za 12 sekund. Žádný šedý obrys pod logem ani pohyb černých tahů po uzavřených konturách. Geometrie z PDF zůstává přesná. Reduced motion ukazuje hotové bílé logo okamžitě.
+- Navigace: plovoucí světlá kapsle dole uprostřed, pět ikon s viditelnými názvy (Úvod, Tvorba, Čtení, Otázky, Kontakt). Bez hamburgeru. Safe-area na telefonu, dost prostoru v patičce. Při scrollu zmizí, po 650 ms klidu se vrátí. Klávesnicový focus ji vždy udrží dostupnou.
+- Patička: velký kontaktní nadpis, e-mail, dvě skupiny vlastních odkazů, původní tmavé logo, copyright a textový Instagram. Kontakt je nyní součástí patičky.
+- FAQ: nativní `details/summary`, použitelné klávesnicí i bez JavaScriptu. Texty v `src/content/faq.mjs`; odpovědi odkazují na vlastní články, bez vymyšlených parametrů nebo dostupnosti.
+- Nový vzhled je v `src/calm.css`; původní komponenty v `src/style.css` mají základní CSS vrstvu `base`. Nové styly mají přednost. Další změny úvodu dělat v aktuálních stylech.
+- SEO: unikátní titulky a popisy, canonical, Open Graph, jazyk `cs`, JSON-LD Organization/WebSite/WebPage nebo Article. Sitemap obsahuje čtyři skutečné stránky, robots.txt na ni odkazuje. FAQ je čitelný obsah, neslibujeme rozšířený výsledek ve vyhledávání.
+
+Podklady k SEO: [Google — sitemapy](https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview), [Google — změny podpory FAQ](https://developers.google.com/search/updates). Ověřeno 5. 10. 2026.
+
+## Předchozí specifikace 2.0
+
 Verze 2.0 · 5. 10. 2026. Tato verze zapracovává nové zadání uživatele: skutečné vektorové logo jako hlavní motiv, postupné vykreslení v hero, zvětšené výřezy jeho linií a vlastní články bez odkazování návštěvníka na jiné weby. Nahrazuje pravidla původního návrhu 1.0 tam, kde se liší.
 
 ## 1. Vizuální směr
