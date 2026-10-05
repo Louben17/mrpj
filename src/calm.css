@@ -95,6 +95,9 @@ dialog { padding: 20px; border: 0; border-radius: var(--mrpj-radius-dialog); }
 .footer-top { display: grid; gap: 48px; }
 .footer h2 { margin-top: 24px; font-size: clamp(2rem, 1.3rem + 2.5vw, 3.75rem); }
 .footer-mail { display: inline-flex; align-items: center; gap: 24px; min-height: 48px; margin-top: 24px; font-size: 1.25rem; text-decoration-thickness: 1px; text-underline-offset: 8px; }
+.footer-instagram { display: flex; width: fit-content; align-items: center; gap: 12px; min-height: 48px; margin-top: 16px; padding: 8px 20px 8px 10px; border: 1px solid #c5baab; border-radius: var(--mrpj-radius-pill); font-size: .875rem; text-decoration: none; transition: background-color 200ms ease, border-color 200ms ease; }
+.footer-instagram svg { flex-shrink: 0; width: 30px; height: 30px; padding: 5px; border-radius: var(--mrpj-radius-pill); background: var(--mrpj-color-espresso); color: var(--mrpj-color-surface); }
+.footer-instagram strong { font-weight: 600; }
 .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .footer-links nav { display: flex; flex-direction: column; align-items: start; }
 .footer-links .eyebrow { font-size: .6875rem; margin-bottom: 12px; }
@@ -149,5 +152,6 @@ html { scroll-padding-bottom: 110px; }
   .reading-card:hover { translate: 0 -4px; }
   .reading-card:hover .card-glyph { translate: -12px 8px; scale: 1.03; }
 }
-@media (hover: hover) { .site-header .dock a:hover { background: #ede7df; } .footer-links a:hover { text-decoration: underline; text-underline-offset: 5px; } }
+@media (hover: hover) { .footer-instagram:hover { background: var(--mrpj-color-surface); border-color: var(--mrpj-color-control-border); }
+  .site-header .dock a:hover { background: #ede7df; } .footer-links a:hover { text-decoration: underline; text-underline-offset: 5px; } }
 @media (prefers-reduced-motion: reduce) { .site-header { transition: none; } }
