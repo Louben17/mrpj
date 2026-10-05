@@ -1,14 +1,5 @@
 [
   {
-    "file": "mrpj-vyroba.webp",
-    "source": "https://www.instagram.com/mrpjcz/reel/DHY9tIIsP1M/",
-    "description": "Nalévání vosku při výrobě svíčky MRPJ.",
-    "retrieved": "2026-10-05",
-    "width": 360,
-    "height": 640,
-    "kind": "original MRPJ Instagram photo or reel cover"
-  },
-  {
     "file": "mrpj-mramor.webp",
     "variants": [
       "mrpj-mramor-800.webp"
@@ -95,5 +86,17 @@
     "width": 1448,
     "height": 1086,
     "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
+    "file": "mrpj-reel-vyroba.mp4",
+    "variants": [
+      "mrpj-reel-vyroba.webp"
+    ],
+    "source": "https://www.instagram.com/mrpjcz/reel/DMU-wGoML9d/",
+    "description": "Reel z výroby: nalévání barevné směsi do forem, odformování a hotové nádoby MRPJ.",
+    "retrieved": "2026-10-05",
+    "width": 540,
+    "height": 960,
+    "kind": "original MRPJ Instagram reel (muted, resized) with poster frame"
   }
 ]

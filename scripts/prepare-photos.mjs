@@ -1,5 +1,6 @@
 import sharp from 'sharp';
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 
 // Import pouze vlastních fotografií MRPJ z veřejné galerie stránky MRPJ na Facebooku,
 // stažených v plné velikosti do .cache/facebook/ (nepublikuje se).
@@ -12,7 +13,11 @@ const selection = [
   { fbid: '122160108698442734', name: 'mrpj-barvy', sizes: [800, 1440], description: 'Barevné nádoby MRPJ ve dvou řadách.' },
   { fbid: '122127206456442734', name: 'mrpj-dilna', sizes: [1200, 2048], description: 'Svíčky MRPJ s dřevěnými knoty vyfocené shora.' },
 ];
-const retired = ['mrpj-pastel.webp'];
+const retired = ['mrpj-pastel.webp', 'mrpj-vyroba.webp'];
+// Vlastní reely MRPJ z Instagramu (staženo do .cache/reels/). Bez zvuku, zmenšené, s úvodním snímkem. Vyžaduje ffmpeg.
+const reels = [
+  { id: 'DMU-wGoML9d', name: 'mrpj-reel-vyroba', posterAt: 1.2, description: 'Reel z výroby: nalévání barevné směsi do forem, odformování a hotové nádoby MRPJ.' },
+];
 // Generativní ilustrace jsou povolené jen pro články a doplňky webu, nikdy ne jako svíčky nebo výrobky.
 const illustrations = [
   { from: '.cache/ai/sojovy-vosk.png', name: 'cteni-sojovy-vosk', sizes: [800, 1448], description: 'Keramická miska s voskovými vločkami na lněném ubrusu. Ilustrace k článku o sójovém vosku.' },
@@ -22,7 +27,7 @@ const illustrations = [
 
 await mkdir('public/images', { recursive: true });
 const previous = JSON.parse(await readFile('public/images/sources.json', 'utf8'));
-const names = new Set([...selection, ...illustrations].map(item => `${item.name}.webp`));
+const names = new Set([...selection, ...illustrations].map(item => `${item.name}.webp`).concat(reels.map(item => `${item.name}.mp4`)));
 const sources = previous.filter(entry => !names.has(entry.file) && !retired.includes(entry.file));
 for (const item of selection) {
   const photo = downloaded.find(entry => entry.fbid === item.fbid);
@@ -37,6 +42,13 @@ for (const item of illustrations) {
   await sharp(item.from).resize({ width: small, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public/images/${item.name}-${small}.webp`);
   const info = await sharp(item.from).resize({ width: large, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public/images/${item.name}.webp`);
   sources.push({ file: `${item.name}.webp`, variants: [`${item.name}-${small}.webp`], source: 'Generated with AI and supplied by the user', description: item.description, retrieved: '2026-10-05', width: info.width, height: info.height, kind: 'AI-generated article illustration (no MRPJ product shown)' });
+}
+for (const item of reels) {
+  const input = `.cache/reels/${item.id}.mp4`;
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', input, '-an', '-vf', 'scale=540:-2,fps=30', '-c:v', 'libx264', '-profile:v', 'high', '-pix_fmt', 'yuv420p', '-crf', '25', '-preset', 'slow', '-movflags', '+faststart', `public/images/${item.name}.mp4`]);
+  execFileSync('ffmpeg', ['-v', 'error', '-y', '-ss', String(item.posterAt), '-i', input, '-frames:v', '1', '-vf', 'scale=540:-2', `.cache/reels/${item.name}-poster.png`]);
+  const info = await sharp(`.cache/reels/${item.name}-poster.png`).webp({ quality: 80 }).toFile(`public/images/${item.name}.webp`);
+  sources.push({ file: `${item.name}.mp4`, variants: [`${item.name}.webp`], source: `https://www.instagram.com/mrpjcz/reel/${item.id}/`, description: item.description, retrieved: '2026-10-05', width: info.width, height: info.height, kind: 'original MRPJ Instagram reel (muted, resized) with poster frame' });
 }
 for (const file of retired) await rm(`public/images/${file}`, { force: true });
 await writeFile('public/images/sources.json', `${JSON.stringify(sources, null, 2)}\n`);
