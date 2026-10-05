@@ -1,32 +1,5 @@
 [
   {
-    "file": "mrpj-pastel.webp",
-    "source": "https://www.instagram.com/mrpjcz/reel/DMxvx0pseBy/",
-    "description": "Pastelové zelené a růžové nádoby MRPJ.",
-    "retrieved": "2026-10-05",
-    "width": 360,
-    "height": 640,
-    "kind": "original MRPJ Instagram photo or reel cover"
-  },
-  {
-    "file": "mrpj-mramor.webp",
-    "source": "https://www.instagram.com/mrpjcz/reel/DNIyN_jMvi_/",
-    "description": "Mramorovaná nádoba se svíčkou MRPJ.",
-    "retrieved": "2026-10-05",
-    "width": 361,
-    "height": 640,
-    "kind": "original MRPJ Instagram photo or reel cover"
-  },
-  {
-    "file": "mrpj-barvy.webp",
-    "source": "https://www.instagram.com/mrpjcz/p/DMewvLuMa29/",
-    "description": "Barevné svíčky a nádoby MRPJ.",
-    "retrieved": "2026-10-05",
-    "width": 513,
-    "height": 640,
-    "kind": "original MRPJ Instagram photo or reel cover"
-  },
-  {
     "file": "mrpj-vyroba.webp",
     "source": "https://www.instagram.com/mrpjcz/reel/DHY9tIIsP1M/",
     "description": "Nalévání vosku při výrobě svíčky MRPJ.",
@@ -34,5 +7,93 @@
     "width": 360,
     "height": 640,
     "kind": "original MRPJ Instagram photo or reel cover"
+  },
+  {
+    "file": "mrpj-mramor.webp",
+    "variants": [
+      "mrpj-mramor-800.webp"
+    ],
+    "source": "https://www.facebook.com/photo.php?fbid=122207306666442734",
+    "gallery": "https://www.facebook.com/profile.php?id=61563282029068&sk=photos",
+    "description": "Mramorovaná nádoba MRPJ v černé a broskvové na oválném podnosu.",
+    "retrieved": "2026-10-05",
+    "width": 1600,
+    "height": 2133,
+    "kind": "original MRPJ Facebook page photo"
+  },
+  {
+    "file": "mrpj-zelena.webp",
+    "variants": [
+      "mrpj-zelena-800.webp"
+    ],
+    "source": "https://www.facebook.com/photo.php?fbid=122144766494442734",
+    "gallery": "https://www.facebook.com/profile.php?id=61563282029068&sk=photos",
+    "description": "Dvě zelené nádoby MRPJ na podnosu s vizitkou MRPJ.",
+    "retrieved": "2026-10-05",
+    "width": 1536,
+    "height": 2048,
+    "kind": "original MRPJ Facebook page photo"
+  },
+  {
+    "file": "mrpj-barvy.webp",
+    "variants": [
+      "mrpj-barvy-800.webp"
+    ],
+    "source": "https://www.facebook.com/photo.php?fbid=122160108698442734",
+    "gallery": "https://www.facebook.com/profile.php?id=61563282029068&sk=photos",
+    "description": "Barevné nádoby MRPJ ve dvou řadách.",
+    "retrieved": "2026-10-05",
+    "width": 1440,
+    "height": 1796,
+    "kind": "original MRPJ Facebook page photo"
+  },
+  {
+    "file": "mrpj-dilna.webp",
+    "variants": [
+      "mrpj-dilna-1200.webp"
+    ],
+    "source": "https://www.facebook.com/photo.php?fbid=122127206456442734",
+    "gallery": "https://www.facebook.com/profile.php?id=61563282029068&sk=photos",
+    "description": "Svíčky MRPJ s dřevěnými knoty vyfocené shora.",
+    "retrieved": "2026-10-05",
+    "width": 2048,
+    "height": 1536,
+    "kind": "original MRPJ Facebook page photo"
+  },
+  {
+    "file": "cteni-sojovy-vosk.webp",
+    "variants": [
+      "cteni-sojovy-vosk-800.webp"
+    ],
+    "source": "Generated with AI and supplied by the user",
+    "description": "Keramická miska s voskovými vločkami na lněném ubrusu. Ilustrace k článku o sójovém vosku.",
+    "retrieved": "2026-10-05",
+    "width": 1448,
+    "height": 1086,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
+    "file": "cteni-dreveny-knot.webp",
+    "variants": [
+      "cteni-dreveny-knot-800.webp"
+    ],
+    "source": "Generated with AI and supplied by the user",
+    "description": "Nůžky na knoty, dřevěné knoty a růžová keramická miska na lněném ubrusu. Ilustrace k článku o dřevěném knotu.",
+    "retrieved": "2026-10-05",
+    "width": 1448,
+    "height": 1086,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
+    "file": "cteni-bezpecne-horeni.webp",
+    "variants": [
+      "cteni-bezpecne-horeni-800.webp"
+    ],
+    "source": "Generated with AI and supplied by the user",
+    "description": "Mosazné zhášedlo, zápalky a kamenná podložka na lněném ubrusu. Ilustrace k článku o bezpečném hoření.",
+    "retrieved": "2026-10-05",
+    "width": 1448,
+    "height": 1086,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
   }
 ]

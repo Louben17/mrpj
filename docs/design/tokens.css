@@ -24,9 +24,10 @@
   --mrpj-weight-control: 600;
   --mrpj-size-h1: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
   --mrpj-size-hero-caption: clamp(2rem, 1.25rem + 2vw, 3rem);
-  --mrpj-logo-duration: 12s;
+  --mrpj-logo-duration: 4.2s;
+  --mrpj-logo-delay: 300ms;
   --mrpj-color-hero: #E5DED3;
-  --mrpj-logo-stagger: 220ms;
+  --mrpj-logo-stagger: 450ms;
   --mrpj-size-h2: clamp(2rem, 1.5rem + 2vw, 3rem);
   --mrpj-size-h3: clamp(1.375rem, 1.3125rem + 0.25vw, 1.5rem);
   --mrpj-size-lead: clamp(1.125rem, 1.0625rem + 0.25vw, 1.25rem);
@@ -68,9 +69,12 @@
   --mrpj-button-height-desktop: 52px;
   --mrpj-button-padding-inline: 24px;
   --mrpj-touch-target: 44px;
-  --mrpj-radius-image: 0px;
-  --mrpj-radius-control: 2px;
-  --mrpj-radius-dialog: 4px;
+  --mrpj-radius-image: 24px;
+  --mrpj-radius-card: 28px;
+  --mrpj-radius-panel: 20px;
+  --mrpj-radius-pill: 999px;
+  --mrpj-radius-control: 999px;
+  --mrpj-radius-dialog: 28px;
   --mrpj-border-width: 1px;
   --mrpj-focus-width: 2px;
   --mrpj-focus-offset: 3px;

@@ -1,3 +1,4 @@
+import './analytics.js';
 const navigation = document.querySelector('#navigation');
 const header = document.querySelector('.site-header');
 const navigationLinks = [...navigation.querySelectorAll('a')];
@@ -32,7 +33,6 @@ document.querySelectorAll('.photo-link[data-photo]').forEach(link => {
   button.setAttribute('aria-haspopup', 'dialog');
   button.setAttribute('aria-controls', 'photo-dialog');
   button.append(...link.childNodes);
-  button.querySelector('.photo-action').innerHTML = '<span>Prohlédnout fotografii</span><span aria-hidden="true">+</span>';
   const { title, photo: filename } = link.dataset;
   link.replaceWith(button);
   button.addEventListener('click', () => {
@@ -74,4 +74,26 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 window.addEventListener('resize', updateNavigation);
 updateNavigation();
+// The footer signature draws like the hero once it is reached; content below the
+// fold rises in. Without JavaScript or with reduced motion everything is static.
+if (matchMedia('(prefers-reduced-motion: no-preference)').matches && 'IntersectionObserver' in window) {
+  const belowFold = element => element.getBoundingClientRect().top > innerHeight;
+  const revealed = new IntersectionObserver(entries => {
+    for (const { isIntersecting, target } of entries) {
+      if (!isIntersecting) continue;
+      if (target.dataset.draw) target.dataset.draw = 'run';
+      else target.dataset.reveal = 'shown';
+      revealed.unobserve(target);
+    }
+  }, { rootMargin: '0px 0px -12% 0px' });
+  const signature = document.querySelector('.footer-signature .logo-draw');
+  if (signature && belowFold(signature)) { signature.dataset.draw = 'pending'; revealed.observe(signature); }
+  document.querySelectorAll('.section-heading, .collection-card, .studio-band figure, .story-copy, .story-visual, .reading-card, .faq-intro, .faq details, .footer-top').forEach(element => {
+    if (!belowFold(element)) return;
+    const siblings = [...element.parentElement.children].filter(child => child.matches(element.tagName));
+    element.style.setProperty('--reveal-delay', `${Math.min(siblings.indexOf(element), 4) * 110}ms`);
+    element.dataset.reveal = 'pending';
+    revealed.observe(element);
+  });
+}
 document.querySelector('[data-year]').textContent = String(new Date().getFullYear());

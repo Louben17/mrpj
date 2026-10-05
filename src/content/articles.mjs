@@ -2,6 +2,7 @@ export const articles = [
   {
     slug: 'sojovy-vosk', number: '01', category: 'MATERIÁL', title: 'Co je sójový vosk?',
     shortTitle: 'Začíná to u sóji.', theme: 'sage', glyph: 'p',
+    image: { name: 'cteni-sojovy-vosk', width: 1448, height: 1086, alt: 'Keramická miska s voskovými vločkami na lněném ubrusu v ranním světle', position: '30% 38%' },
     description: 'Rostlinný původ, jemná kresba povrchu a pár věcí, které je dobré vědět o materiálu našich svíček.',
     intro: 'Vosk je srdcem svíčky. U MRPJ pracujeme se sójovým voskem — materiálem, který má svůj původ v rostlině a svůj vlastní charakter.',
     sections: [
@@ -15,6 +16,7 @@ export const articles = [
   {
     slug: 'dreveny-knot', number: '02', category: 'PÉČE', title: 'Jak pečovat o dřevěný knot',
     shortTitle: 'Dřevěný knot. Malý rituál.', theme: 'blush', glyph: 'm',
+    image: { name: 'cteni-dreveny-knot', width: 1448, height: 1086, alt: 'Černé nůžky na knoty, několik dřevěných knotů a růžová keramická miska na lněném ubrusu', position: '30% 68%' },
     description: 'Co udělat před zapálením, jak odstranit zuhelnatělý okraj a co zkontrolovat, když plamen slábne.',
     intro: 'Dřevěný knot se chová jinak než bavlněný. Trocha péče před dalším zapálením mu pomůže správně pracovat s voskem.',
     sections: [
@@ -28,6 +30,7 @@ export const articles = [
   {
     slug: 'bezpecne-horeni', number: '03', category: 'BEZPEČNOST', title: 'Jak si svíčku užít bezpečně',
     shortTitle: 'Dobré místo pro plamen.', theme: 'sand', glyph: 'j',
+    image: { name: 'cteni-bezpecne-horeni', width: 1448, height: 1086, alt: 'Mosazné zhášedlo, krabička zápalek a kamenná podložka na lněném ubrusu', position: '30% 52%' },
     description: 'Kam svíčku postavit, na co myslet při hoření a proč ji nechat v klidu vychladnout.',
     intro: 'Svíčka patří k příjemným chvílím doma. Je to ale otevřený plamen, a proto potřebuje vhodné místo a tvou pozornost.',
     sections: [
