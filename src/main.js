@@ -22,9 +22,11 @@ navigationLinks.forEach(link => link.addEventListener('click', () => {
   const wasOpen = toggle.getAttribute('aria-expanded') === 'true';
   closeMenu();
   if (wasOpen) {
-    const heading = document.querySelector(`${link.hash} h2`);
-    heading.setAttribute('tabindex', '-1');
-    requestAnimationFrame(() => heading.focus({ preventScroll: true }));
+    const heading = link.pathname === location.pathname && document.querySelector(`${link.hash} h2`);
+    if (heading) {
+      heading.setAttribute('tabindex', '-1');
+      requestAnimationFrame(() => heading.focus({ preventScroll: true }));
+    }
   }
 }));
 document.addEventListener('keydown', event => {
@@ -42,7 +44,7 @@ document.addEventListener('click', event => {
 desktop.addEventListener('change', () => {
   const focusIsHidden = !desktop.matches && navigation.contains(document.activeElement);
   closeMenu();
-  if (focusIsHidden || (desktop.matches && document.activeElement === toggle)) header.querySelector('.wordmark').focus();
+  if (focusIsHidden || (desktop.matches && document.activeElement === toggle)) header.querySelector('.brand').focus();
 });
 
 // Links remain usable without JavaScript; enhancement uses native buttons.
@@ -58,7 +60,6 @@ document.querySelectorAll('.photo-link[data-photo]').forEach(link => {
   button.setAttribute('aria-controls', 'photo-dialog');
   button.append(...link.childNodes);
   button.querySelector('.photo-action').innerHTML = '<span>Prohlédnout fotografii</span><span aria-hidden="true">+</span>';
-  const source = link.href;
   const { title, photo: filename } = link.dataset;
   link.replaceWith(button);
   button.addEventListener('click', () => {
@@ -66,30 +67,30 @@ document.querySelectorAll('.photo-link[data-photo]').forEach(link => {
     document.querySelector('#photo-title').textContent = title;
     photo.src = `/images/${filename}`;
     photo.alt = button.querySelector('img').alt;
-    document.querySelector('#photo-source').href = source;
     dialog.showModal();
     document.documentElement.classList.add('dialog-open');
   });
 });
-document.querySelector('#close-dialog').addEventListener('click', () => dialog.close());
-dialog.addEventListener('close', () => {
+document.querySelector('#close-dialog')?.addEventListener('click', () => dialog.close());
+dialog?.addEventListener('close', () => {
   document.documentElement.classList.remove('dialog-open');
   photoTrigger?.focus({ preventScroll: true });
 });
-dialog.addEventListener('click', event => {
+dialog?.addEventListener('click', event => {
   const bounds = dialog.getBoundingClientRect();
   if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
 });
 
 // Indicate the current section without taking over scrolling.
 let scrollQueued = false;
+const sectionLinks = navigationLinks.filter(link => link.pathname === location.pathname && link.hash && document.querySelector(link.hash));
 function updateNavigation() {
   scrollQueued = false;
   let activeHash;
-  for (const link of navigationLinks) {
+  for (const link of sectionLinks) {
     if (document.querySelector(link.hash).getBoundingClientRect().top <= innerHeight * 0.4) activeHash = link.hash;
   }
-  if (scrollY + innerHeight >= document.documentElement.scrollHeight - 2) activeHash = navigationLinks.at(-1).hash;
+  if (sectionLinks.length && scrollY + innerHeight >= document.documentElement.scrollHeight - 2) activeHash = sectionLinks.at(-1).hash;
   for (const link of navigationLinks) {
     if (link.hash === activeHash) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');

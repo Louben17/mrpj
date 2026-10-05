@@ -4,8 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/generate-design-tokens.mjs && node scripts/build-pages.mjs",
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build",
+    "pages": "node scripts/build-pages.mjs",
+    "build": "node scripts/generate-design-tokens.mjs && node scripts/build-pages.mjs && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "design:tokens": "node scripts/generate-design-tokens.mjs",
     "design:preview": "node scripts/preview-design.mjs"

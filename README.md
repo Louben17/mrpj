@@ -1,10 +1,10 @@
 # MRPJ
 
-Prezentační web rodinné značky MRPJ: svíčky ze sójového vosku a ručně vyráběné designové nádoby. Teplý minimalistický design, vlastní logo, vlastní fotografie, Instagram a základní péče o svíčky.
+Prezentační web rodinné značky svíček a designových nádob. Vzhled vychází z původních vektorových křivek MRPJ: animované logo v úvodu, zvětšené motivy písmen, vlastní fotografie a tři články přímo na webu.
 
 ## Vývoj
 
-Použij Node.js 22 LTS nebo novější podporovanou verzi a npm.
+Node.js 22 LTS nebo novější podporovaná verze a npm.
 
 ```sh
 npm ci
@@ -12,58 +12,39 @@ npm run dev
 ```
 
 ```sh
+npm run pages
 npm run build
 npm run preview
 ```
 
-Web je statický, postavený na Vite. Produkční výstup je v `dist/`. Nepotřebuje databázi, Instagram token ani další tajné údaje.
+Web používá Vite a statické HTML. Build generuje tokeny, všechny stránky a výstup `dist/`. Po úpravě šablony nebo článku během vývoje spusť `npm run pages`; poté Vite načte nové HTML. Žádná databáze, Instagram embed nebo externí fonty.
 
-## Obsah a fotografie
+## Kde upravovat
 
-- `index.html`: texty, sekce, kontakty a odkazy na Instagram.
-- `src/style.css` a `src/fonts.css`: vzhled po komponentách, responzivní rozvržení a lokálně hostované fonty. Stylesheet importuje společné hodnoty z `docs/design/tokens.css`.
-- `src/main.js`: mobilní menu, označení aktuální sekce, detail fotografie s návratem focusu a rok v patičce.
-- `public/favicon.svg`: tři paralelní linky jako grafický podpis z manuálu.
-- `public/images/logo-original.jpg`: původní logo dodané uživatelem. Na webu se pouze ořezává pomocí CSS.
-- `public/images/mrpj-*.webp`: skutečné fotografie nebo náhledy videí z profilu [@mrpjcz](https://www.instagram.com/mrpjcz/).
-- `public/images/sources.json`: původ fotografií a odkazy na konkrétní příspěvky.
-- `scripts/prepare-photos.mjs`: volitelný jednorázový převod importovaných fotografií do WebP. Očekává lokální, nezveřejňované vstupy v `artifacts/instagram/`; běžný vývoj ani build ho nepotřebují.
+- `src/templates/home.mjs`: kompozice a obsah domovské stránky.
+- `src/templates/site.mjs`: společná hlavička, patička a článková šablona.
+- `src/content/articles.mjs`: články o sójovém vosku, dřevěném knotu a bezpečném hoření.
+- `src/style.css`, `src/fonts.css`: rozvržení, animace, komponenty a lokální fonty.
+- `src/main.js`: menu, aktuální sekce, detail fotografie a rok.
+- `docs/design/tokens.json`: barvy, typografické hodnoty a parametry kreslení loga.
+- `scripts/build-pages.mjs`: generování HTML, loga a sitemap.xml.
 
-Galerie je ručně vybraný výběr příspěvků. Kliknutí otevře celý vlastní snímek v nativním dialogu; odkaz na původní Instagram příspěvek zůstává v detailu. Escape, zavírací tlačítko i kliknutí mimo dialog jej zavřou a vrátí focus na fotografii. Bez JavaScriptu fotografie fungují jako přímé odkazy na Instagram. Fotografie jsou uložené v projektu, takže jejich zobrazení nezávisí na platnosti dočasných CDN adres.
+Generované `index.html`, `cteni/*/index.html`, `public/brand/*.svg` a `docs/design/tokens.css` neupravuj ručně. Vite má čtyři HTML vstupy v `vite.config.js`, takže články fungují i při přímém otevření a bez JavaScriptu.
 
-Svíčky a výrobky zobrazuj pouze pomocí vlastních fotografií MRPJ. Žádné generativní produktové fotografie. Pro vyšší ostrost lze instagramové náhledy později nahradit původními fotografiemi.
+## Logo a fotografie
 
-Fonty Manrope a Cormorant Garamond jsou hostované lokálně; licence jsou v `public/fonts/LICENSE-*.txt`. Web nepoužívá analytiku, externí fontové požadavky ani Instagram embed.
+Uživatelův `logo.pdf` byl převeden přímo do `src/brand/logo-source.svg`. Čtyři původní křivky zůstávají zachované. Export lze zopakovat pomocí `pdftocairo -svg logo.pdf src/brand/logo-source.svg`; běžný build Poppler ani původní PDF nepotřebuje.
 
-## Designový manuál
+Animace odhaluje původní výplně maskou vedenou po jejich skutečných obrysech. Proběhne jednou a neblokuje stránku; při reduced motion je logo rovnou celé. Z původních písmen vznikají i dekorativní motivy a favicon.
 
-Vzhled webu a pravidla pro další úpravy jsou v [docs/DESIGN_MANUAL.md](docs/DESIGN_MANUAL.md): barvy, typografie, rozvržení, práce s vlastními fotografiemi, tlačítka a jejich stavy, galerie, navigace, pohyb a přístupnost. Směr je **současné řemeslné studio** s krémovou a hnědou, geometrickými titulky a přirozenými barvami výrobků. Redesign z 5. 10. 2026 tento systém používá přímo v produkčním stylesheetu.
+Fotografie `public/images/mrpj-*.webp` jsou skutečné MRPJ, převzaté z uživatelova profilu @mrpjcz. Původ je v `public/images/sources.json`. Žádné generativní produktové fotografie ani přebarvování. Pro větší obrazové plochy je potřeba dodat vlastní originály s vyšším rozlišením.
 
-[docs/DESIGN_RESEARCH.md](docs/DESIGN_RESEARCH.md) obsahuje audit mrpj.cz a rozbor FRAMA, Earl of East, StudioSmall a ferm LIVING včetně zdrojů a omezení průzkumu.
+Galerie ukazuje celý obraz v nativním dialogu s Escape a návratem focusu. Bez JS odkazuje na vlastní soubor fotografie. Veřejné stránky odkazují na vlastní články a e-mail, Instagram je uvedený jako textový profil. Redakční zdroje jsou v [docs/ARTICLE_SOURCES.md](docs/ARTICLE_SOURCES.md).
 
-Číselné hodnoty mají jeden zdroj v [docs/design/tokens.json](docs/design/tokens.json). Po jejich změně přegeneruj CSS; vizuální ukázku otevři přes vlastní lokální server:
+## Design a nasazení
 
-```sh
-npm run design:tokens
-npm run design:preview
-```
+[Designový manuál 2.0](docs/DESIGN_MANUAL.md) určuje práci s křivkami, animací, barvami, typografií a obsahem. [Původní průzkum](docs/DESIGN_RESEARCH.md) zachycuje podklady předchozího návrhu. Základní komponenty lze otevřít příkazem `npm run design:preview` na http://127.0.0.1:4174/.
 
-Ukázka běží na http://127.0.0.1:4174/ a nabízí přepínání barevného podkladu, tlačítka, detail vlastních fotografií, rozbalovací odpovědi a lokální validaci pole. Formulář neodesílá ani neukládá údaje. Jde o podklad pro další tvorbu, ne o veřejnou část webu; produkční build jej nezahrnuje. Postup zavedení nového vzhledu je na konci manuálu.
+Repozitář: https://github.com/Louben17/mrpj. Vercel projekt `mrpj` v týmu `jakub-kozels-projects`. Push do `main` spouští produkční build. Veřejný web: https://mrpj.cz/. Doména a DNS zůstávají u WEDOSu; původní postup je v [docs/DOMAIN.md](docs/DOMAIN.md).
 
-## Nasazení
-
-Repozitář: https://github.com/Louben17/mrpj
-
-Vercel projekt: `mrpj` v týmu `jakub-kozels-projects`, propojený s GitHub repozitářem. Push do `main` spustí produkční deployment. Nastavení je v `vercel.json`.
-
-Hlavní doména: https://mrpj.cz/
-
-Postup přesměrování domény je v [docs/DOMAIN.md](docs/DOMAIN.md). Registrace domény i DNS zůstávají u WEDOSu. Webový obsah hostuje Vercel.
-
-## Zdroje článků
-
-- [Cargill: NatureWax FAQ](https://www.cargill.com/bioindustrial/naturewax/soy-wax-faq)
-- [National Candle Association: správné používání svíček](https://candles.org/your-foolproof-guide-to-burning-a-candle-correctly/)
-- [National Candle Association: bezpečné používání svíček](https://candles.org/candle-safety-tips/)
-
-Vždy se řiď konkrétním knotem a pokyny výrobce svíčky; obecný tip pro bavlněný knot nemusí platit pro dřevěný.
+Nezveřejňovat `.env*`, `.cache/`, `artifacts/`, lokální PDF ani snímky administrace. Fonty mají licence OFL uložené v `public/fonts/`.
