@@ -43,7 +43,7 @@ export const articles = [
   },
   {
     slug: 'prvni-zapaleni', updated: '6. 10. 2026', footerTitle: 'První zapálení', number: '04', category: 'PÉČE', title: 'První zapálení: proč na něm tolik záleží',
-    shortTitle: 'První zapálení rozhoduje.', theme: 'sage', glyph: 'r',
+    shortTitle: 'První zapálení rozhoduje.', theme: 'mist', glyph: 'r',
     image: { prompt: 'a small brass hourglass sand timer, two long unlit wooden matches and a neatly folded oatmeal linen napkin', alt: 'Mosazné přesýpací hodiny, dvě dlouhé zápalky a složený lněný ubrousek', position: '30% 6%' },
     description: 'Jak svíčku zapálit poprvé, aby se vosk roztál rovnoměrně a netvořil se tunel kolem knotu.',
     intro: 'Vosk si pamatuje. Jak široko se roztaví při prvním hoření, takovou cestou se často vydá i příště. Proto se vyplatí dát první chvíli s plamenem trochu času.',
@@ -57,7 +57,7 @@ export const articles = [
   },
   {
     slug: 'proc-svicka-cadi', updated: '6. 10. 2026', footerTitle: 'Když svíčka čadí', number: '05', category: 'ŘEŠENÍ', title: 'Proč svíčka čadí a jak tomu předejít',
-    shortTitle: 'Když plamen čadí.', theme: 'blush', glyph: 'p',
+    shortTitle: 'Když plamen čadí.', theme: 'apricot', glyph: 'p',
     image: { prompt: 'a small speckled stoneware saucer holding a few short charred wooden wick trimmings, a soft folded plain white cotton cloth, and a small box of wooden matches', alt: 'Kameninový talířek s ohořelými kousky dřevěného knotu, složený bavlněný hadřík a krabička zápalek', position: '30% 32%' },
     description: 'Odkud se berou saze, proč plamen kmitá a co udělat, aby nádoba zůstala čistá.',
     intro: 'Klidný plamen hoří tiše a skoro bez kouře. Když svíčka začne čadit nebo na nádobě přibývají černé stopy, většinou tím něco naznačuje. Příčina bývá jednoduchá.',
@@ -71,7 +71,7 @@ export const articles = [
   },
   {
     slug: 'druhy-zivot-nadoby', updated: '6. 10. 2026', footerTitle: 'Druhý život nádoby', number: '06', category: 'NÁDOBY', title: 'Druhý život nádoby po dohoření',
-    shortTitle: 'Nádoba, která zůstává.', theme: 'sand', glyph: 'm',
+    shortTitle: 'Nádoba, která zůstává.', theme: 'lavender', glyph: 'm',
     image: { prompt: 'a small wooden spatula, a neatly folded paper towel, a small succulent in a terracotta-coloured plastic nursery pot, a few pencils and a couple of round cotton pads', alt: 'Dřevěná špachtle, papírová utěrka, sukulent v plastovém květináči, tužky a odličovací tampony', position: '30% 38%' },
     description: 'Jak bezpečně vyndat zbytek vosku a k čemu nádobu používat, když svíčka dohoří.',
     intro: 'Svíčka jednou dohoří, nádoba ale může zůstat. Naše nádoby tvoříme s péčí, a tak by byla škoda je vyhodit. Stačí je šetrně vyčistit.',

@@ -51,13 +51,18 @@
 .collection-card:has(:focus-visible) { outline: 2px solid var(--mrpj-color-focus); outline-offset: 4px; }
 .collection-card :focus-visible { outline: none; }
 
+/* Three more pastel grounds for the second row of reading. */
+.mist { background: var(--mrpj-color-mist); }
+.apricot { background: var(--mrpj-color-apricot); }
+.lavender { background: var(--mrpj-color-lavender); }
+
 /* Rounded, softer surfaces across the site. */
 .reading-card { border-radius: var(--mrpj-radius-card); transition: translate 400ms var(--mrpj-motion-ease); }
 /* The original letter lines, scaled far past the card edge: texture, not text — our handwriting. */
 .reading-card .card-glyph { inset: -26% -62% -26% 18%; width: auto; height: auto; opacity: .14; transition: translate 1200ms var(--mrpj-motion-ease), scale 1200ms var(--mrpj-motion-ease); }
 .reading-card .card-glyph img { object-position: left center; }
-.reading-card.blush .card-glyph { inset: -38% -70% -14% 6%; }
-.reading-card.sand .card-glyph { inset: -80% -12% -6% 26%; }
+.reading-card.blush .card-glyph, .reading-card.apricot .card-glyph { inset: -38% -70% -14% 6%; }
+.reading-card.sand .card-glyph, .reading-card.lavender .card-glyph { inset: -80% -12% -6% 26%; }
 .reel-frame { position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; border-radius: var(--mrpj-radius-image); background: var(--mrpj-color-sand); }
 .reel { display: block; width: 100%; height: 100%; object-fit: cover; }
 .reel-toggle { position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid rgb(255 255 255 / 70%); border-radius: var(--mrpj-radius-pill); background: rgb(252 250 246 / 86%); color: var(--mrpj-color-ink); box-shadow: 0 4px 16px rgb(43 37 33 / 12%); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
@@ -67,8 +72,8 @@
 .article-figure img { border-radius: var(--mrpj-radius-image); }
 /* Same handwriting texture as the reading cards: one large fragment of the original letter. */
 .article-heading .article-glyph { --t: -30%; --r: -70%; --b: -40%; --l: 14%; inset: var(--t) auto auto var(--l); width: calc(100% - var(--l) - var(--r)); height: calc(100% - var(--t) - var(--b)); max-width: none; object-fit: contain; object-position: left center; opacity: .14; }
-.article-heading.blush .article-glyph { --t: -50%; --r: -90%; --b: -30%; --l: 2%; }
-.article-heading.sand .article-glyph { --t: -140%; --r: -30%; --b: -12%; --l: 22%; object-position: left bottom; }
+.article-heading.blush .article-glyph, .article-heading.apricot .article-glyph { --t: -50%; --r: -90%; --b: -30%; --l: 2%; }
+.article-heading.sand .article-glyph, .article-heading.lavender .article-glyph { --t: -140%; --r: -30%; --b: -12%; --l: 22%; object-position: left bottom; }
 .article-takeaway { padding: 24px 28px; border: 0; border-radius: var(--mrpj-radius-panel); background: var(--mrpj-color-surface); }
 dialog { padding: 20px; border: 0; border-radius: var(--mrpj-radius-dialog); }
 #dialog-photo { border-radius: 16px; }
@@ -129,8 +134,8 @@ html { scroll-padding-bottom: 110px; }
   .collection-grid { grid-auto-columns: min(44%, 360px); gap: 16px; margin-inline: -32px; padding-inline: 32px; scroll-padding-inline: 32px; }
   .collection-card figcaption { left: 14px; right: 14px; bottom: 14px; }
   .article-heading .article-glyph { --t: -70%; --r: -8%; --b: -70%; --l: 52%; }
-  .article-heading.blush .article-glyph { --t: -110%; --r: -14%; --b: -50%; --l: 46%; }
-  .article-heading.sand .article-glyph { --t: -170%; --r: -4%; --b: -16%; --l: 60%; }
+  .article-heading.blush .article-glyph, .article-heading.apricot .article-glyph { --t: -110%; --r: -14%; --b: -50%; --l: 46%; }
+  .article-heading.sand .article-glyph, .article-heading.lavender .article-glyph { --t: -170%; --r: -4%; --b: -16%; --l: 60%; }
   .article-figure img { aspect-ratio: 2 / 1; object-position: var(--figure-position, center); }
   .footer { padding-top: 80px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 64px; }

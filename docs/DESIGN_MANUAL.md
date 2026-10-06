@@ -66,6 +66,9 @@ Po dokončení masku překryje plná původní kresba, aby byly přesné i konce
 | Sage | `#D8DEC7` | Článek o vosku. |
 | Blush | `#EAD3CE` | Článek o dřevěném knotu. |
 | Sand | `#E7DECF` | Článek o bezpečnosti. |
+| Mist | `#D6DEE2` | Článek o prvním zapálení. Kontrast s ink 11,09 : 1. |
+| Apricot | `#F0D8C3` | Článek o čadění. Kontrast s ink 11,02 : 1. |
+| Lavender | `#DFD7E5` | Článek o druhém životě nádoby. Kontrast s ink 10,79 : 1. |
 | Line | `#D8D0C4` | Dělicí linky. |
 | Control border | `#82756A` | Hranice ovládání. |
 
