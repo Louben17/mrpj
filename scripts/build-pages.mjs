@@ -1,9 +1,15 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { articles } from '../src/content/articles.mjs';
+import { articles as sourceArticles } from '../src/content/articles.mjs';
 import { articlePage } from '../src/templates/site.mjs';
 import { homePage } from '../src/templates/home.mjs';
 
 const root = new URL('../', import.meta.url);
+// An article shows its illustration only once the image exists (see scripts/generate-illustrations.mjs).
+const media = JSON.parse(await readFile(new URL('public/images/sources.json', root), 'utf8'));
+const articles = sourceArticles.map(article => {
+  const entry = article.image && media.find(item => item.file === `cteni-${article.slug}.webp`);
+  return { ...article, image: entry ? { ...article.image, name: `cteni-${article.slug}`, width: entry.width, height: entry.height } : null };
+});
 const source = await readFile(new URL('src/brand/logo-source.svg', root), 'utf8');
 const paths = [...source.matchAll(/<path\b[^>]*\sd="([^"]+)"/g)].map(match => match[1]);
 if (paths.length !== 4) throw new Error('The original PDF logo must contain exactly four letter paths.');
@@ -72,4 +78,4 @@ for (const article of articles) {
   await writeFile(new URL('index.html', directory), articlePage(article, articles, signature));
 }
 await writeFile(new URL('public/sitemap.xml', root), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['/', ...articles.map(article => `/cteni/${article.slug}/`)].map(path => `<url><loc>https://mrpj.cz${path}</loc></url>`).join('')}</urlset>\n`);
-console.log('Built original vector logo, homepage and three local articles.');
+console.log(`Built original vector logo, homepage and ${articles.length} local articles (${articles.filter(article => article.image).length} illustrated).`);

@@ -1,6 +1,8 @@
 import sharp from 'sharp';
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
+import { existsSync, readFileSync } from 'node:fs';
+import { articles } from '../src/content/articles.mjs';
 
 // Import pouze vlastních fotografií MRPJ z veřejné galerie stránky MRPJ na Facebooku,
 // stažených v plné velikosti do .cache/facebook/ (nepublikuje se).
@@ -19,11 +21,8 @@ const reels = [
   { id: 'DMU-wGoML9d', name: 'mrpj-reel-vyroba', posterAt: 1.2, description: 'Reel z výroby: nalévání barevné směsi do forem, odformování a hotové nádoby MRPJ.' },
 ];
 // Generativní ilustrace jsou povolené jen pro články a doplňky webu, nikdy ne jako svíčky nebo výrobky.
-const illustrations = [
-  { from: '.cache/ai/sojovy-vosk.png', name: 'cteni-sojovy-vosk', sizes: [800, 1448], description: 'Keramická miska s voskovými vločkami na lněném ubrusu. Ilustrace k článku o sójovém vosku.' },
-  { from: '.cache/ai/dreveny-knot.png', name: 'cteni-dreveny-knot', sizes: [800, 1448], description: 'Nůžky na knoty, dřevěné knoty a růžová keramická miska na lněném ubrusu. Ilustrace k článku o dřevěném knotu.' },
-  { from: '.cache/ai/bezpecne-horeni.png', name: 'cteni-bezpecne-horeni', sizes: [800, 1448], description: 'Mosazné zhášedlo, zápalky a kamenná podložka na lněném ubrusu. Ilustrace k článku o bezpečném hoření.' },
-];
+// Zdrojem je pole `image` u článku; originál leží v .cache/ai/<slug>.png (viz scripts/generate-illustrations.mjs).
+const illustrations = articles.filter(article => article.image && existsSync(`.cache/ai/${article.slug}.png`)).map(article => ({ from: `.cache/ai/${article.slug}.png`, name: `cteni-${article.slug}`, sizes: [800, 1536], description: `${article.image.alt}. Ilustrace k článku ${article.title}.`, meta: existsSync(`.cache/ai/${article.slug}.json`) ? JSON.parse(readFileSync(`.cache/ai/${article.slug}.json`, 'utf8')) : null }));
 
 await mkdir('public/images', { recursive: true });
 const previous = JSON.parse(await readFile('public/images/sources.json', 'utf8'));
@@ -41,7 +40,7 @@ for (const item of illustrations) {
   const [small, large] = item.sizes;
   await sharp(item.from).resize({ width: small, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public/images/${item.name}-${small}.webp`);
   const info = await sharp(item.from).resize({ width: large, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public/images/${item.name}.webp`);
-  sources.push({ file: `${item.name}.webp`, variants: [`${item.name}-${small}.webp`], source: 'Generated with AI and supplied by the user', description: item.description, retrieved: '2026-10-05', width: info.width, height: info.height, kind: 'AI-generated article illustration (no MRPJ product shown)' });
+  sources.push({ file: `${item.name}.webp`, variants: [`${item.name}-${small}.webp`], source: item.meta ? `Generated with ${item.meta.model} via scripts/generate-illustrations.mjs` : 'Generated with AI (ChatGPT) and supplied by the user', ...(item.meta ? { prompt: item.meta.prompt, generated: item.meta.created } : {}), description: item.description, retrieved: '2026-10-05', width: info.width, height: info.height, kind: 'AI-generated article illustration (no MRPJ product shown)' });
 }
 for (const item of reels) {
   const input = `.cache/reels/${item.id}.mp4`;

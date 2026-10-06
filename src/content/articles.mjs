@@ -1,8 +1,8 @@
 export const articles = [
   {
-    slug: 'sojovy-vosk', number: '01', category: 'MATERIÁL', title: 'Co je sójový vosk?',
+    slug: 'sojovy-vosk', updated: '5. 10. 2026', footerTitle: 'Sójový vosk', number: '01', category: 'MATERIÁL', title: 'Co je sójový vosk?',
     shortTitle: 'Začíná to u sóji.', theme: 'sage', glyph: 'p',
-    image: { name: 'cteni-sojovy-vosk', width: 1448, height: 1086, alt: 'Keramická miska s voskovými vločkami na lněném ubrusu v ranním světle', position: '30% 38%' },
+    image: { prompt: 'a shallow handmade matte ceramic bowl filled with natural soy wax flakes, a few flakes scattered loosely beside it', alt: 'Keramická miska s voskovými vločkami na lněném ubrusu v ranním světle', position: '30% 38%' },
     description: 'Rostlinný původ, jemná kresba povrchu a pár věcí, které je dobré vědět o materiálu našich svíček.',
     intro: 'Vosk je srdcem svíčky. U MRPJ pracujeme se sójovým voskem — materiálem, který má svůj původ v rostlině a svůj vlastní charakter.',
     sections: [
@@ -14,9 +14,9 @@ export const articles = [
     related: 'dreveny-knot',
   },
   {
-    slug: 'dreveny-knot', number: '02', category: 'PÉČE', title: 'Jak pečovat o dřevěný knot',
+    slug: 'dreveny-knot', updated: '5. 10. 2026', footerTitle: 'Dřevěný knot', number: '02', category: 'PÉČE', title: 'Jak pečovat o dřevěný knot',
     shortTitle: 'Dřevěný knot. Malý rituál.', theme: 'blush', glyph: 'm',
-    image: { name: 'cteni-dreveny-knot', width: 1448, height: 1086, alt: 'Černé nůžky na knoty, několik dřevěných knotů a růžová keramická miska na lněném ubrusu', position: '30% 68%' },
+    image: { prompt: 'a few thin flat natural wooden wick strips lying loosely next to a matte black wick trimmer, with a small dusty-pink stoneware saucer beside them', alt: 'Černé nůžky na knoty, několik dřevěných knotů a růžová keramická miska na lněném ubrusu', position: '30% 68%' },
     description: 'Co udělat před zapálením, jak odstranit zuhelnatělý okraj a co zkontrolovat, když plamen slábne.',
     intro: 'Dřevěný knot se chová jinak než bavlněný. Trocha péče před dalším zapálením mu pomůže správně pracovat s voskem.',
     sections: [
@@ -28,9 +28,9 @@ export const articles = [
     related: 'bezpecne-horeni',
   },
   {
-    slug: 'bezpecne-horeni', number: '03', category: 'BEZPEČNOST', title: 'Jak si svíčku užít bezpečně',
+    slug: 'bezpecne-horeni', updated: '5. 10. 2026', footerTitle: 'Bezpečné hoření', number: '03', category: 'BEZPEČNOST', title: 'Jak si svíčku užít bezpečně',
     shortTitle: 'Dobré místo pro plamen.', theme: 'sand', glyph: 'j',
-    image: { name: 'cteni-bezpecne-horeni', width: 1448, height: 1086, alt: 'Mosazné zhášedlo, krabička zápalek a kamenná podložka na lněném ubrusu', position: '30% 52%' },
+    image: { prompt: 'a brushed brass candle snuffer with a long handle, a small box of long matches with two unlit matches beside it, and a round sand-coloured stone coaster', alt: 'Mosazné zhášedlo, krabička zápalek a kamenná podložka na lněném ubrusu', position: '30% 52%' },
     description: 'Kam svíčku postavit, na co myslet při hoření a proč ji nechat v klidu vychladnout.',
     intro: 'Svíčka patří k příjemným chvílím doma. Je to ale otevřený plamen, a proto potřebuje vhodné místo a tvou pozornost.',
     sections: [
@@ -39,6 +39,48 @@ export const articles = [
       ['Po zhasnutí', '<p>Použij zhášedlo nebo plamen opatrně sfoukni. Nikdy svíčku nehas vodou — horký vosk může vystříknout. Ověř, že knot už nežhne, a s nádobou manipuluj až po vychladnutí.</p><p>Nesnaž se vypálit všechen vosk až na dno. Hoření ukonči při zbytkové hladině, kterou uvádí výrobce.</p>'],
     ],
     takeaway: 'Plamen pod dohledem, volný prostor kolem a pokyny ke konkrétní svíčce vždy po ruce.',
+    related: 'prvni-zapaleni',
+  },
+  {
+    slug: 'prvni-zapaleni', updated: '6. 10. 2026', footerTitle: 'První zapálení', number: '04', category: 'PÉČE', title: 'První zapálení: proč na něm tolik záleží',
+    shortTitle: 'První zapálení rozhoduje.', theme: 'sage', glyph: 'r',
+    image: { prompt: 'a small brass hourglass sand timer, two long unlit wooden matches and a neatly folded oatmeal linen napkin', alt: 'Mosazné přesýpací hodiny, dvě dlouhé zápalky a složený lněný ubrousek', position: '30% 6%' },
+    description: 'Jak svíčku zapálit poprvé, aby se vosk roztál rovnoměrně a netvořil se tunel kolem knotu.',
+    intro: 'Vosk si pamatuje. Jak široko se roztaví při prvním hoření, takovou cestou se často vydá i příště. Proto se vyplatí dát první chvíli s plamenem trochu času.',
+    sections: [
+      ['Co je tunelování', '<p>Tunelování znamená, že plamen postupně vypaluje jen úzkou šachtu kolem knotu a u stěn nádoby zůstává nevyužitý vosk. Svíčka pak hoří kratší dobu a plamen se v hlubokém tunelu může dusit.</p><p>Často za tím stojí první zapálení, při kterém se povrch nestihl roztavit až k okrajům. Tuhnoucí vosk si vytvoří takzvaný paměťový kruh a další hoření se drží v něm.</p>'],
+      ['Jak na první hoření', '<p>Před zapálením zkontroluj knot a uprav ho podle návodu ke svíčce. Svíčku postav na rovné místo mimo průvan a nech ji hořet, dokud se roztavená vrstva nerozšíří přes celý povrch až k okrajům nádoby.</p><p>Pro představu se obecně uvádí přibližně hodina hoření na každých 2,5 cm průměru svíčky. Je to jen orientační vodítko. Vždy platí maximální doba hoření uvedená u konkrétní svíčky a svíčka musí být po celou dobu pod dohledem.</p>'],
+      ['Když už se tunel vytvořil', '<p>Mělký tunel se někdy srovná při dalším hoření, když necháš povrch roztát rovnoměrně a nezhasneš příliš brzy. Hluboký tunel neřeš delším hořením, než dovolují pokyny ke svíčce, ani zahříváním nádoby.</p><p>Pokud se u tvého kousku tunel prohlubuje nebo plamen slábne, napiš nám. Rádi se na to podíváme.</p>'],
+    ],
+    takeaway: 'Poprvé nespěchej: nech povrch roztát až k okrajům, ale nikdy ne déle, než dovoluje návod ke svíčce.',
+    related: 'proc-svicka-cadi',
+  },
+  {
+    slug: 'proc-svicka-cadi', updated: '6. 10. 2026', footerTitle: 'Když svíčka čadí', number: '05', category: 'ŘEŠENÍ', title: 'Proč svíčka čadí a jak tomu předejít',
+    shortTitle: 'Když plamen čadí.', theme: 'blush', glyph: 'p',
+    image: { prompt: 'a small speckled stoneware saucer holding a few short charred wooden wick trimmings, a soft folded plain white cotton cloth, and a small box of wooden matches', alt: 'Kameninový talířek s ohořelými kousky dřevěného knotu, složený bavlněný hadřík a krabička zápalek', position: '30% 32%' },
+    description: 'Odkud se berou saze, proč plamen kmitá a co udělat, aby nádoba zůstala čistá.',
+    intro: 'Klidný plamen hoří tiše a skoro bez kouře. Když svíčka začne čadit nebo na nádobě přibývají černé stopy, většinou tím něco naznačuje. Příčina bývá jednoduchá.',
+    sections: [
+      ['Odkud se berou saze', '<p>Saze vznikají, když plamen nedostává dost vzduchu nebo je na knot příliš velký. Nejčastěji za tím stojí dlouhý knot, nahromaděný zuhelnatělý okraj nebo průvan, který plamenem kmitá.</p><p>Čadit může i svíčka, která hoří příliš dlouho v kuse. Na knotu se tvoří uhlíková hlavička a plamen roste.</p>'],
+      ['Co udělat hned', '<p>Svíčku zhasni a nech ji úplně vychladnout. Pak odstraň uvolněnou zuhelnatělou část knotu a všechny úlomky vyber z vosku. Jak na to u dřevěného knotu, popisujeme v článku <a href="/cteni/dreveny-knot/">Jak pečovat o dřevěný knot</a>.</p><p>Před dalším zapálením přesuň svíčku mimo průvan, ventilátor, otevřené okno nebo místo, kudy se často chodí.</p>'],
+      ['Jak udržet nádobu čistou', '<p>Černé stopy na vnitřní stěně nádoby otírej až po vychladnutí, suchým měkkým hadříkem nebo papírovou utěrkou. Dokud je ve svíčce vosk, nepoužívej vodu ani čisticí prostředky.</p><p>Nejlepší prevencí je klidný plamen: upravený knot, místo bez průvanu a hoření jen tak dlouho, jak uvádí návod. Pokud svíčka čadí i potom, ozvi se nám.</p>'],
+    ],
+    takeaway: 'Čadící plamen je signál. Zhasnout, nechat vychladnout, očistit knot a najít klidnější místo.',
+    related: 'druhy-zivot-nadoby',
+  },
+  {
+    slug: 'druhy-zivot-nadoby', updated: '6. 10. 2026', footerTitle: 'Druhý život nádoby', number: '06', category: 'NÁDOBY', title: 'Druhý život nádoby po dohoření',
+    shortTitle: 'Nádoba, která zůstává.', theme: 'sand', glyph: 'm',
+    image: { prompt: 'a small wooden spatula, a neatly folded paper towel, a small succulent in a terracotta-coloured plastic nursery pot, a few pencils and a couple of round cotton pads', alt: 'Dřevěná špachtle, papírová utěrka, sukulent v plastovém květináči, tužky a odličovací tampony', position: '30% 38%' },
+    description: 'Jak bezpečně vyndat zbytek vosku a k čemu nádobu používat, když svíčka dohoří.',
+    intro: 'Svíčka jednou dohoří, nádoba ale může zůstat. Naše nádoby tvoříme s péčí, a tak by byla škoda je vyhodit. Stačí je šetrně vyčistit.',
+    sections: [
+      ['Kdy přestat zapalovat', '<p>Svíčku nevypaluj až na dno. Hoření ukonči ve chvíli, kdy na dně zbývá vrstva vosku uvedená v návodu ke svíčce. Obecně se doporučuje nechat kolem jednoho centimetru, aby se dno nádoby nepřehřálo.</p>'],
+      ['Jak vyndat zbytek vosku', '<p>Nech nádobu úplně vychladnout. Zbytek vosku pak opatrně uvolni dřevěnou špachtlí nebo lžící a vyndej ho i se zbytkem knotu. Tenkou vrstvu na stěnách setři papírovou utěrkou.</p><p>U skleněných nádob se často doporučuje mrazák nebo horká voda. U našich nádob s tím počkej a nejdřív se nám ozvi, protože každý materiál snáší chlad, teplo a vodu jinak. Vosk nikdy nevylévej do umyvadla ani do odpadu, po vychladnutí ho ucpe.</p>'],
+      ['Nápady na další použití', '<p>Vyčištěná nádoba se hodí na tužky a štětce, odličovací tampony, sponky do vlasů nebo drobné šperky. Může z ní být i obal na květináč: rostlinku nech v jejím plastovém květináči a ten do nádoby jen vlož, ať voda nezůstává na dně.</p><p>Na potraviny nádobu po svíčce nepoužívej.</p>'],
+    ],
+    takeaway: 'Zbytek vosku vyndej až po vychladnutí a šetrně. Nádoba pak může dál sloužit drobnostem, které chceš mít na očích.',
     related: 'sojovy-vosk',
   },
 ];

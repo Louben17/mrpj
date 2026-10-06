@@ -56,8 +56,8 @@
     "variants": [
       "cteni-sojovy-vosk-800.webp"
     ],
-    "source": "Generated with AI and supplied by the user",
-    "description": "Keramická miska s voskovými vločkami na lněném ubrusu. Ilustrace k článku o sójovém vosku.",
+    "source": "Generated with AI (ChatGPT) and supplied by the user",
+    "description": "Keramická miska s voskovými vločkami na lněném ubrusu v ranním světle. Ilustrace k článku Co je sójový vosk?.",
     "retrieved": "2026-10-05",
     "width": 1448,
     "height": 1086,
@@ -68,8 +68,8 @@
     "variants": [
       "cteni-dreveny-knot-800.webp"
     ],
-    "source": "Generated with AI and supplied by the user",
-    "description": "Nůžky na knoty, dřevěné knoty a růžová keramická miska na lněném ubrusu. Ilustrace k článku o dřevěném knotu.",
+    "source": "Generated with AI (ChatGPT) and supplied by the user",
+    "description": "Černé nůžky na knoty, několik dřevěných knotů a růžová keramická miska na lněném ubrusu. Ilustrace k článku Jak pečovat o dřevěný knot.",
     "retrieved": "2026-10-05",
     "width": 1448,
     "height": 1086,
@@ -80,11 +80,53 @@
     "variants": [
       "cteni-bezpecne-horeni-800.webp"
     ],
-    "source": "Generated with AI and supplied by the user",
-    "description": "Mosazné zhášedlo, zápalky a kamenná podložka na lněném ubrusu. Ilustrace k článku o bezpečném hoření.",
+    "source": "Generated with AI (ChatGPT) and supplied by the user",
+    "description": "Mosazné zhášedlo, krabička zápalek a kamenná podložka na lněném ubrusu. Ilustrace k článku Jak si svíčku užít bezpečně.",
     "retrieved": "2026-10-05",
     "width": 1448,
     "height": 1086,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
+    "file": "cteni-prvni-zapaleni.webp",
+    "variants": [
+      "cteni-prvni-zapaleni-800.webp"
+    ],
+    "source": "Generated with gpt-image-2.5-flare via scripts/generate-illustrations.mjs",
+    "prompt": "Editorial still life photograph in a calm, minimal series: objects on a warm cream linen tablecloth. Soft diffused morning daylight from the left with gentle window-shadow streaks, warm minimal palette of cream, ivory, beige and soft brown. Objects placed in the left third, generous empty linen space on the right. Shot from about 45 degrees above, 85mm lens, shallow depth of field, natural photographic texture. Scene: a small brass hourglass sand timer, two long unlit wooden matches and a neatly folded oatmeal linen napkin. Strictly no candles, no candle jars or candle vessels, no flame, no smoke, no text, no letters, no logos, no people, no hands.",
+    "generated": "2026-10-06T11:32:06.121Z",
+    "description": "Mosazné přesýpací hodiny, dvě dlouhé zápalky a složený lněný ubrousek. Ilustrace k článku První zapálení: proč na něm tolik záleží.",
+    "retrieved": "2026-10-05",
+    "width": 1536,
+    "height": 1024,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
+    "file": "cteni-proc-svicka-cadi.webp",
+    "variants": [
+      "cteni-proc-svicka-cadi-800.webp"
+    ],
+    "source": "Generated with gpt-image-2.5-flare via scripts/generate-illustrations.mjs",
+    "prompt": "Editorial still life photograph in a calm, minimal series: objects on a warm cream linen tablecloth. Soft diffused morning daylight from the left with gentle window-shadow streaks, warm minimal palette of cream, ivory, beige and soft brown. Objects placed in the left third, generous empty linen space on the right. Shot from about 45 degrees above, 85mm lens, shallow depth of field, natural photographic texture. Scene: a small speckled stoneware saucer holding a few short charred wooden wick trimmings, a soft folded plain white cotton cloth, and a small box of wooden matches. Strictly no candles, no candle jars or candle vessels, no flame, no smoke, no text, no letters, no logos, no people, no hands.",
+    "generated": "2026-10-06T11:33:21.657Z",
+    "description": "Kameninový talířek s ohořelými kousky dřevěného knotu, složený bavlněný hadřík a krabička zápalek. Ilustrace k článku Proč svíčka čadí a jak tomu předejít.",
+    "retrieved": "2026-10-05",
+    "width": 1536,
+    "height": 1024,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
+    "file": "cteni-druhy-zivot-nadoby.webp",
+    "variants": [
+      "cteni-druhy-zivot-nadoby-800.webp"
+    ],
+    "source": "Generated with gpt-image-2.5-flare via scripts/generate-illustrations.mjs",
+    "prompt": "Editorial still life photograph in a calm, minimal series: objects on a warm cream linen tablecloth. Soft diffused morning daylight from the left with gentle window-shadow streaks, warm minimal palette of cream, ivory, beige and soft brown. Objects placed in the left third, generous empty linen space on the right. Shot from about 45 degrees above, 85mm lens, shallow depth of field, natural photographic texture. Scene: a small wooden spatula, a neatly folded paper towel, a small succulent in a terracotta-coloured plastic nursery pot, a few pencils and a couple of round cotton pads. Strictly no candles, no candle jars or candle vessels, no flame, no smoke, no text, no letters, no logos, no people, no hands.",
+    "generated": "2026-10-06T11:32:27.282Z",
+    "description": "Dřevěná špachtle, papírová utěrka, sukulent v plastovém květináči, tužky a odličovací tampony. Ilustrace k článku Druhý život nádoby po dohoření.",
+    "retrieved": "2026-10-05",
+    "width": 1536,
+    "height": 1024,
     "kind": "AI-generated article illustration (no MRPJ product shown)"
   },
   {
