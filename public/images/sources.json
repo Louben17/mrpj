@@ -13,32 +13,6 @@
     "kind": "original MRPJ Facebook page photo"
   },
   {
-    "file": "mrpj-zelena.webp",
-    "variants": [
-      "mrpj-zelena-800.webp"
-    ],
-    "source": "https://www.facebook.com/photo.php?fbid=122144766494442734",
-    "gallery": "https://www.facebook.com/profile.php?id=61563282029068&sk=photos",
-    "description": "Dvě zelené nádoby MRPJ na podnosu s vizitkou MRPJ.",
-    "retrieved": "2026-10-05",
-    "width": 1536,
-    "height": 2048,
-    "kind": "original MRPJ Facebook page photo"
-  },
-  {
-    "file": "mrpj-barvy.webp",
-    "variants": [
-      "mrpj-barvy-800.webp"
-    ],
-    "source": "https://www.facebook.com/photo.php?fbid=122160108698442734",
-    "gallery": "https://www.facebook.com/profile.php?id=61563282029068&sk=photos",
-    "description": "Barevné nádoby MRPJ ve dvou řadách.",
-    "retrieved": "2026-10-05",
-    "width": 1440,
-    "height": 1796,
-    "kind": "original MRPJ Facebook page photo"
-  },
-  {
     "file": "mrpj-dilna.webp",
     "variants": [
       "mrpj-dilna-1200.webp"
@@ -50,6 +24,90 @@
     "width": 2048,
     "height": 1536,
     "kind": "original MRPJ Facebook page photo"
+  },
+  {
+    "file": "mrpj-svicky-barvy.webp",
+    "variants": [
+      "mrpj-svicky-barvy-800.webp"
+    ],
+    "source": "Supplied by the user (own MRPJ phone photo)",
+    "description": "Barevné svíčky MRPJ s dřevěným knotem v žebrovaných nádobách.",
+    "retrieved": "2026-10-06",
+    "width": 1600,
+    "height": 2133,
+    "kind": "original MRPJ photo, resized, metadata removed"
+  },
+  {
+    "file": "mrpj-vlny.webp",
+    "variants": [
+      "mrpj-vlny-800.webp"
+    ],
+    "source": "Supplied by the user (own MRPJ phone photo)",
+    "description": "Nádoby MRPJ s kresbou barevných vln a vizitkou MRPJ.",
+    "retrieved": "2026-10-06",
+    "width": 1512,
+    "height": 2016,
+    "kind": "original MRPJ photo, resized, metadata removed"
+  },
+  {
+    "file": "mrpj-geometrie.webp",
+    "variants": [
+      "mrpj-geometrie-800.webp"
+    ],
+    "source": "Supplied by the user (own MRPJ phone photo)",
+    "description": "Mátová geometrická nádoba MRPJ a podnos s vřesem.",
+    "retrieved": "2026-10-06",
+    "width": 1512,
+    "height": 2016,
+    "kind": "original MRPJ photo, resized, metadata removed"
+  },
+  {
+    "file": "mrpj-pastel-tecky.webp",
+    "variants": [
+      "mrpj-pastel-tecky-800.webp"
+    ],
+    "source": "Supplied by the user (own MRPJ phone photo)",
+    "description": "Růžový květináč MRPJ s drobnými tečkami, podmiskou a vizitkou.",
+    "retrieved": "2026-10-06",
+    "width": 1512,
+    "height": 2016,
+    "kind": "original MRPJ photo, resized, metadata removed"
+  },
+  {
+    "file": "mrpj-zelena-par.webp",
+    "variants": [
+      "mrpj-zelena-par-800.webp"
+    ],
+    "source": "Supplied by the user (own MRPJ phone photo)",
+    "description": "Dvě zelené nádoby MRPJ na oválném podnosu s vizitkou MRPJ.",
+    "retrieved": "2026-10-06",
+    "width": 1512,
+    "height": 2016,
+    "kind": "original MRPJ photo, resized, metadata removed"
+  },
+  {
+    "file": "mrpj-zluta-oranzova.webp",
+    "variants": [
+      "mrpj-zluta-oranzova-800.webp"
+    ],
+    "source": "Supplied by the user (own MRPJ phone photo)",
+    "description": "Žlutá hladká a oranžová žebrovaná nádoba MRPJ s vizitkou.",
+    "retrieved": "2026-10-06",
+    "width": 1324,
+    "height": 2014,
+    "kind": "original MRPJ photo, resized, metadata removed"
+  },
+  {
+    "file": "mrpj-modra-cervena.webp",
+    "variants": [
+      "mrpj-modra-cervena-800.webp"
+    ],
+    "source": "Supplied by the user (own MRPJ phone photo)",
+    "description": "Modrá žebrovaná, béžová a červená nádoba MRPJ s vizitkou.",
+    "retrieved": "2026-10-06",
+    "width": 1512,
+    "height": 2016,
+    "kind": "original MRPJ photo, resized, metadata removed"
   },
   {
     "file": "cteni-sojovy-vosk.webp",

@@ -11,11 +11,20 @@ const gallery = 'https://www.facebook.com/profile.php?id=61563282029068&sk=photo
 const downloaded = JSON.parse(await readFile('.cache/facebook/photos.json', 'utf8'));
 const selection = [
   { fbid: '122207306666442734', name: 'mrpj-mramor', sizes: [800, 1600], description: 'Mramorovaná nádoba MRPJ v černé a broskvové na oválném podnosu.' },
-  { fbid: '122144766494442734', name: 'mrpj-zelena', sizes: [800, 1536], description: 'Dvě zelené nádoby MRPJ na podnosu s vizitkou MRPJ.' },
-  { fbid: '122160108698442734', name: 'mrpj-barvy', sizes: [800, 1440], description: 'Barevné nádoby MRPJ ve dvou řadách.' },
   { fbid: '122127206456442734', name: 'mrpj-dilna', sizes: [1200, 2048], description: 'Svíčky MRPJ s dřevěnými knoty vyfocené shora.' },
 ];
-const retired = ['mrpj-pastel.webp', 'mrpj-vyroba.webp'];
+const retired = ['mrpj-pastel.webp', 'mrpj-vyroba.webp', 'mrpj-zelena.webp', 'mrpj-zelena-800.webp', 'mrpj-barvy.webp', 'mrpj-barvy-800.webp'];
+// Vlastní fotografie MRPJ z mobilu, dodané uživatelem 6. 10. 2026 (originály v .cache/mobile/).
+// Výstup je bez metadat: sharp EXIF včetně případné polohy GPS nepřenáší.
+const userPhotos = [
+  { from: '.cache/mobile/IMG_7539.JPG', name: 'mrpj-svicky-barvy', sizes: [800, 1600], description: 'Barevné svíčky MRPJ s dřevěným knotem v žebrovaných nádobách.' },
+  { from: '.cache/mobile/IMG_7860.jpg', name: 'mrpj-vlny', sizes: [800, 1512], description: 'Nádoby MRPJ s kresbou barevných vln a vizitkou MRPJ.' },
+  { from: '.cache/mobile/IMG_2973.jpg', name: 'mrpj-geometrie', sizes: [800, 1512], description: 'Mátová geometrická nádoba MRPJ a podnos s vřesem.' },
+  { from: '.cache/mobile/IMG_3706.jpg', name: 'mrpj-pastel-tecky', sizes: [800, 1512], description: 'Růžový květináč MRPJ s drobnými tečkami, podmiskou a vizitkou.' },
+  { from: '.cache/mobile/IMG_4556.JPG', name: 'mrpj-zelena-par', sizes: [800, 1512], description: 'Dvě zelené nádoby MRPJ na oválném podnosu s vizitkou MRPJ.' },
+  { from: '.cache/mobile/IMG_7292.jpg', name: 'mrpj-zluta-oranzova', sizes: [800, 1324], description: 'Žlutá hladká a oranžová žebrovaná nádoba MRPJ s vizitkou.' },
+  { from: '.cache/mobile/IMG_7377.JPG', name: 'mrpj-modra-cervena', sizes: [800, 1512], description: 'Modrá žebrovaná, béžová a červená nádoba MRPJ s vizitkou.' },
+];
 // Vlastní reely MRPJ z Instagramu (staženo do .cache/reels/). Bez zvuku, zmenšené, s úvodním snímkem. Vyžaduje ffmpeg.
 const reels = [
   { id: 'DMU-wGoML9d', name: 'mrpj-reel-vyroba', posterAt: 1.2, description: 'Reel z výroby: nalévání barevné směsi do forem, odformování a hotové nádoby MRPJ.' },
@@ -26,7 +35,7 @@ const illustrations = articles.filter(article => article.image && existsSync(`.c
 
 await mkdir('public/images', { recursive: true });
 const previous = JSON.parse(await readFile('public/images/sources.json', 'utf8'));
-const names = new Set([...selection, ...illustrations].map(item => `${item.name}.webp`).concat(reels.map(item => `${item.name}.mp4`)));
+const names = new Set([...selection, ...illustrations, ...userPhotos].map(item => `${item.name}.webp`).concat(reels.map(item => `${item.name}.mp4`)));
 const sources = previous.filter(entry => !names.has(entry.file) && !retired.includes(entry.file));
 for (const item of selection) {
   const photo = downloaded.find(entry => entry.fbid === item.fbid);
@@ -35,6 +44,12 @@ for (const item of selection) {
   await sharp(photo.file).rotate().resize({ width: small, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public/images/${item.name}-${small}.webp`);
   const info = await sharp(photo.file).rotate().resize({ width: large, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public/images/${item.name}.webp`);
   sources.push({ file: `${item.name}.webp`, variants: [`${item.name}-${small}.webp`], source: photo.permalink, gallery, description: item.description, retrieved: '2026-10-05', width: info.width, height: info.height, kind: 'original MRPJ Facebook page photo' });
+}
+for (const item of userPhotos) {
+  const [small, large] = item.sizes;
+  await sharp(item.from).rotate().resize({ width: small, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public/images/${item.name}-${small}.webp`);
+  const info = await sharp(item.from).rotate().resize({ width: large, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public/images/${item.name}.webp`);
+  sources.push({ file: `${item.name}.webp`, variants: [`${item.name}-${small}.webp`], source: 'Supplied by the user (own MRPJ phone photo)', description: item.description, retrieved: '2026-10-06', width: info.width, height: info.height, kind: 'original MRPJ photo, resized, metadata removed' });
 }
 for (const item of illustrations) {
   const [small, large] = item.sizes;

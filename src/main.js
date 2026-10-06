@@ -116,9 +116,9 @@ if (matchMedia('(prefers-reduced-motion: no-preference)').matches && 'Intersecti
   }, { rootMargin: '0px 0px -12% 0px' });
   const signature = document.querySelector('.footer-signature .logo-draw');
   if (signature && belowFold(signature)) { signature.dataset.draw = 'pending'; revealed.observe(signature); }
-  document.querySelectorAll('.section-heading, .collection-card, .studio-band figure, .story-copy, .story-visual, .reading-card, .faq-intro, .faq details, .footer-top').forEach(element => {
+  document.querySelectorAll('.section-heading, .collection-card, .collection-more, .studio-band figure, .story-copy, .story-visual, .reading-card, .faq-intro, .faq details, .footer-top').forEach(element => {
     if (!belowFold(element)) return;
-    const siblings = [...element.parentElement.children].filter(child => child.matches(element.tagName));
+    const siblings = [...element.parentElement.children];
     element.style.setProperty('--reveal-delay', `${Math.min(siblings.indexOf(element), 4) * 110}ms`);
     element.dataset.reveal = 'pending';
     revealed.observe(element);
