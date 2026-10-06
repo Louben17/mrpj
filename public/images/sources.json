@@ -13,19 +13,6 @@
     "kind": "original MRPJ Facebook page photo"
   },
   {
-    "file": "mrpj-dilna.webp",
-    "variants": [
-      "mrpj-dilna-1200.webp"
-    ],
-    "source": "https://www.facebook.com/photo.php?fbid=122127206456442734",
-    "gallery": "https://www.facebook.com/profile.php?id=61563282029068&sk=photos",
-    "description": "Svíčky MRPJ s dřevěnými knoty vyfocené shora.",
-    "retrieved": "2026-10-05",
-    "width": 2048,
-    "height": 1536,
-    "kind": "original MRPJ Facebook page photo"
-  },
-  {
     "file": "mrpj-svicky-barvy.webp",
     "variants": [
       "mrpj-svicky-barvy-800.webp"
@@ -197,6 +184,18 @@
     "retrieved": "2026-10-05",
     "width": 540,
     "height": 960,
-    "kind": "original MRPJ Instagram reel (muted, resized) with poster frame"
+    "kind": "original MRPJ video (muted, resized) with poster frame"
+  },
+  {
+    "file": "mrpj-reel-vosk.mp4",
+    "variants": [
+      "mrpj-reel-vosk.webp"
+    ],
+    "source": "https://www.facebook.com/61563282029068/videos/1711316129602580/",
+    "description": "Video z výroby: nalévání roztaveného sójového vosku do mramorované nádoby MRPJ s dřevěným knotem.",
+    "retrieved": "2026-10-05",
+    "width": 540,
+    "height": 960,
+    "kind": "original MRPJ video (muted, resized) with poster frame"
   }
 ]

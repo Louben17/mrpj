@@ -76,16 +76,16 @@ window.addEventListener('resize', updateNavigation);
 updateNavigation();
 // The studio reel plays silently only while visible. It always has a pause control,
 // and with reduced motion it waits for the visitor to start it.
-const reel = document.querySelector('.reel');
-if (reel) {
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.reel').forEach(reel => {
   reel.removeAttribute('controls');
   reel.muted = true;
-  let pausedByVisitor = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let pausedByVisitor = reducedMotion;
   const toggle = document.createElement('button');
   toggle.type = 'button';
   toggle.className = 'reel-toggle';
   toggle.innerHTML = '<svg class="icon-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3" width="3" height="10" rx="1"/><rect x="9" y="3" width="3" height="10" rx="1"/></svg><svg class="icon-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9a.6.6 0 0 0 .9.5l7.2-4.5a.6.6 0 0 0 0-1L5.9 3a.6.6 0 0 0-.9.5Z"/></svg>';
-  const update = () => { toggle.dataset.state = reel.paused ? 'paused' : 'playing'; toggle.setAttribute('aria-label', reel.paused ? 'Přehrát video' : 'Pozastavit video'); };
+  const update = () => { toggle.dataset.state = reel.paused ? 'paused' : 'playing'; toggle.setAttribute('aria-label', `${reel.paused ? 'Přehrát' : 'Pozastavit'} video: ${reel.closest('figure')?.querySelector('figcaption')?.textContent.replace(/^s*d+s*/, '') ?? ''}`); };
   toggle.addEventListener('click', () => {
     pausedByVisitor = !reel.paused;
     if (reel.paused) reel.play().catch(() => {}); else reel.pause();
@@ -100,7 +100,7 @@ if (reel) {
       else if (!entry.isIntersecting && !reel.paused) reel.pause();
     }, { threshold: .35 }).observe(reel);
   }
-}
+});
 
 // The footer signature draws like the hero once it is reached; content below the
 // fold rises in. Without JavaScript or with reduced motion everything is static.
@@ -116,7 +116,7 @@ if (matchMedia('(prefers-reduced-motion: no-preference)').matches && 'Intersecti
   }, { rootMargin: '0px 0px -12% 0px' });
   const signature = document.querySelector('.footer-signature .logo-draw');
   if (signature && belowFold(signature)) { signature.dataset.draw = 'pending'; revealed.observe(signature); }
-  document.querySelectorAll('.section-heading, .collection-card, .collection-more, .studio-band figure, .story-copy, .story-visual, .reading-card, .faq-intro, .faq details, .footer-top').forEach(element => {
+  document.querySelectorAll('.section-heading, .collection-card, .collection-more, .story-copy, .reel-item, .reading-card, .faq-intro, .faq details, .footer-top').forEach(element => {
     if (!belowFold(element)) return;
     const siblings = [...element.parentElement.children];
     element.style.setProperty('--reveal-delay', `${Math.min(siblings.indexOf(element), 4) * 110}ms`);
