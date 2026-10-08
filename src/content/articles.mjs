@@ -3,14 +3,14 @@ export const articles = [
     slug: 'sojovy-vosk', updated: '5. 10. 2026', footerTitle: 'Sójový vosk', number: '01', category: 'MATERIÁL', title: 'Co je sójový vosk?',
     shortTitle: 'Začíná to u sóji.', theme: 'sage', glyph: 'p',
     image: { prompt: 'a shallow handmade matte ceramic bowl filled with natural soy wax flakes, a few flakes scattered loosely beside it', alt: 'Keramická miska s voskovými vločkami na lněném ubrusu v ranním světle', position: '30% 38%' },
-    description: 'Rostlinný původ, jemná kresba povrchu a pár věcí, které je dobré vědět o materiálu našich svíček.',
-    intro: 'Vosk je srdcem svíčky. U MRPJ pracujeme se sójovým voskem — materiálem, který má svůj původ v rostlině a svůj vlastní charakter.',
+    description: 'Z čeho se sójový vosk vyrábí, proč se na něm občas objeví bělavý povlak a co svíčce svědčí.',
+    intro: 'Svíčky MRPJ děláme ze sójového vosku, který vzniká z rostlinného oleje. Tady je, co o něm stojí za to vědět.',
     sections: [
       ['Od rostliny k vosku', '<p>Sójový vosk se vyrábí ze sójového oleje. Ten se zpracováním zvaným hydrogenace mění z kapalného oleje na pevnější materiál vhodný pro výrobu svíček. Používá se například pro svíčky v nádobách.</p><p>O tom, jak bude hotová svíčka hořet, rozhoduje celá kombinace: vosk, knot, nádoba i případné další složky. Samotný název vosku proto neříká všechno o vlastnostech konkrétní svíčky.</p>'],
       ['Povrch může mít vlastní kresbu', '<p>Na sójovém vosku se někdy objeví jemný bělavý povlak, kterému se říká frosting. Vzniká krystalizací vosku. Jde o vzhledovou vlastnost, která sama o sobě neznamená zhoršení hoření.</p><p>Drobná změna vzhledu povrchu není totéž co poškozená nádoba nebo problém s knotem. Pokud si u svého kousku nejsi jistý, ozvi se nám a popiš, co vidíš.</p>'],
       ['Co svíčce svědčí', '<p>Uchovávej ji na suchém místě mimo přímé slunce a zdroje tepla. Před zapálením zkontroluj knot a odstraň volné nečistoty z povrchu. Při hoření dej přednost pokynům přiloženým ke konkrétní svíčce.</p><p>Rostlinný původ neznamená, že svíčka může hořet bez dozoru. Její plamen potřebuje stejnou pozornost jako u ostatních vosků.</p>'],
     ],
-    takeaway: 'Každá svíčka je souhra materiálu, nádoby a knotu. Nejlepší vodítko je návod ke konkrétnímu kousku.',
+    takeaway: 'Jak svíčka hoří, záleží na vosku, knotu i nádobě. Nejlepší vodítko je návod ke konkrétnímu kousku.',
     related: 'dreveny-knot',
   },
   {
@@ -21,10 +21,10 @@ export const articles = [
     intro: 'Dřevěný knot se chová jinak než bavlněný. Trocha péče před dalším zapálením mu pomůže správně pracovat s voskem.',
     sections: [
       ['01 / Nejdřív nech svíčku vychladnout', '<p>Knot upravuj až po zhasnutí, když vosk zcela ztuhne a nádoba vychladne. Práce s horkým voskem nebo hořícím knotem není součástí běžné péče.</p>'],
-      ['02 / Odstraň zuhelnatělý okraj', '<p>Před dalším zapálením jemně odstraň uvolněnou zuhelnatělou část na vršku knotu. Pomoci mohou nůžky na knoty. Všechny úlomky vyber z vosku, aby v něm nezůstaly další hořlavé nečistoty.</p><p>U řady dřevěných knotů se doporučuje délka přibližně 3–5 mm nad voskem. Je to orientační údaj: různé typy knotů potřebují různé nastavení. Rozhodující jsou pokyny k tvé svíčce. Doporučení pro bavlněný knot na dřevěný automaticky nepřenášej.</p>'],
+      ['02 / Odstraň zuhelnatělý okraj', '<p>Před dalším zapálením jemně odstraň uvolněnou zuhelnatělou část na vršku knotu. Pomoci mohou nůžky na knoty. Všechny úlomky vyber z vosku, aby v něm nezůstaly další hořlavé nečistoty.</p><p>U řady dřevěných knotů se doporučuje délka přibližně 3 až 5 mm nad voskem. Je to orientační údaj: různé typy knotů potřebují různé nastavení. Rozhodující jsou pokyny k tvé svíčce. Doporučení pro bavlněný knot na dřevěný automaticky nepřenášej.</p>'],
       ['03 / Když plamen slábne', '<p>Příliš dlouhý knot nebo nahromaděný popel mohou přispívat k malému plameni a zhasínání. Svíčku zhasni, nech vychladnout a před novým zapálením zkontroluj čistotu i délku knotu.</p><p>Pokud problém přetrvává, napiš nám. Knot nevytahuj z vosku a nepokoušej se problém vyřešit delším hořením, než dovolují pokyny ke svíčce.</p>'],
     ],
-    takeaway: 'Vychladnout. Očistit. Zkontrolovat délku. A teprve potom znovu zapálit.',
+    takeaway: 'Nech svíčku vychladnout, očisti knot, zkontroluj jeho délku a teprve potom ji znovu zapal.',
     related: 'bezpecne-horeni',
   },
   {
@@ -36,9 +36,9 @@ export const articles = [
     sections: [
       ['Než škrtneš zápalkou', '<p>Postav svíčku na stabilní, žáruvzdornou podložku. Kolem ní nech volný prostor, alespoň 30 cm od záclon, papíru a dalších hořlavých věcí. Vyber místo mimo průvan a dosah dětí i zvířat.</p><p>Zkontroluj, že nádoba není poškozená a ve vosku nejsou zbytky zápalek ani knotu. Délku knotu uprav podle návodu ke svíčce.</p>'],
       ['Během hoření', '<p>Hořící svíčku nenechávej bez dozoru. Zhasni ji, než odejdeš z místnosti nebo půjdeš spát. Svíčkou s tekutým voskem nehýbej.</p><p>Rovnoměrné roztátí povrchu může pomoci předcházet tunelování. Kvůli tomu ale nepřekračuj maximální dobu hoření výrobce. Pokud plamen výrazně kouří nebo se chová neobvykle, svíčku zhasni a nech vychladnout.</p>'],
-      ['Po zhasnutí', '<p>Použij zhášedlo nebo plamen opatrně sfoukni. Nikdy svíčku nehas vodou — horký vosk může vystříknout. Ověř, že knot už nežhne, a s nádobou manipuluj až po vychladnutí.</p><p>Nesnaž se vypálit všechen vosk až na dno. Hoření ukonči při zbytkové hladině, kterou uvádí výrobce.</p>'],
+      ['Po zhasnutí', '<p>Použij zhášedlo nebo plamen opatrně sfoukni. Nikdy svíčku nehas vodou, horký vosk může vystříknout. Ověř, že knot už nežhne, a s nádobou manipuluj až po vychladnutí.</p><p>Nesnaž se vypálit všechen vosk až na dno. Hoření ukonči při zbytkové hladině, kterou uvádí výrobce.</p>'],
     ],
-    takeaway: 'Plamen pod dohledem, volný prostor kolem a pokyny ke konkrétní svíčce vždy po ruce.',
+    takeaway: 'Měj plamen pod dohledem, nech kolem svíčky volný prostor a drž se pokynů ke konkrétní svíčce.',
     related: 'prvni-zapaleni',
   },
   {
@@ -46,7 +46,7 @@ export const articles = [
     shortTitle: 'První zapálení rozhoduje.', theme: 'mist', glyph: 'r',
     image: { prompt: 'a small brass hourglass sand timer, two long unlit wooden matches and a neatly folded oatmeal linen napkin', alt: 'Mosazné přesýpací hodiny, dvě dlouhé zápalky a složený lněný ubrousek', position: '30% 6%' },
     description: 'Jak svíčku zapálit poprvé, aby se vosk roztál rovnoměrně a netvořil se tunel kolem knotu.',
-    intro: 'Vosk si pamatuje. Jak široko se roztaví při prvním hoření, takovou cestou se často vydá i příště. Proto se vyplatí dát první chvíli s plamenem trochu času.',
+    intro: 'Jak široko se vosk roztaví při prvním hoření, tak se většinou taví i příště. Proto se vyplatí dát prvnímu zapálení dost času.',
     sections: [
       ['Co je tunelování', '<p>Tunelování znamená, že plamen postupně vypaluje jen úzkou šachtu kolem knotu a u stěn nádoby zůstává nevyužitý vosk. Svíčka pak hoří kratší dobu a plamen se v hlubokém tunelu může dusit.</p><p>Často za tím stojí první zapálení, při kterém se povrch nestihl roztavit až k okrajům. Tuhnoucí vosk si vytvoří takzvaný paměťový kruh a další hoření se drží v něm.</p>'],
       ['Jak na první hoření', '<p>Před zapálením zkontroluj knot a uprav ho podle návodu ke svíčce. Svíčku postav na rovné místo mimo průvan a nech ji hořet, dokud se roztavená vrstva nerozšíří přes celý povrch až k okrajům nádoby.</p><p>Pro představu se obecně uvádí přibližně hodina hoření na každých 2,5 cm průměru svíčky. Je to jen orientační vodítko. Vždy platí maximální doba hoření uvedená u konkrétní svíčky a svíčka musí být po celou dobu pod dohledem.</p>'],
@@ -60,13 +60,13 @@ export const articles = [
     shortTitle: 'Když plamen čadí.', theme: 'apricot', glyph: 'p',
     image: { prompt: 'a small speckled stoneware saucer holding a few short charred wooden wick trimmings, a soft folded plain white cotton cloth, and a small box of wooden matches', alt: 'Kameninový talířek s ohořelými kousky dřevěného knotu, složený bavlněný hadřík a krabička zápalek', position: '30% 32%' },
     description: 'Odkud se berou saze, proč plamen kmitá a co udělat, aby nádoba zůstala čistá.',
-    intro: 'Klidný plamen hoří tiše a skoro bez kouře. Když svíčka začne čadit nebo na nádobě přibývají černé stopy, většinou tím něco naznačuje. Příčina bývá jednoduchá.',
+    intro: 'Klidný plamen hoří skoro bez kouře. Když svíčka začne čadit nebo na nádobě přibývají černé stopy, příčina bývá jednoduchá a dá se napravit.',
     sections: [
       ['Odkud se berou saze', '<p>Saze vznikají, když plamen nedostává dost vzduchu nebo je na knot příliš velký. Nejčastěji za tím stojí dlouhý knot, nahromaděný zuhelnatělý okraj nebo průvan, který plamenem kmitá.</p><p>Čadit může i svíčka, která hoří příliš dlouho v kuse. Na knotu se tvoří uhlíková hlavička a plamen roste.</p>'],
       ['Co udělat hned', '<p>Svíčku zhasni a nech ji úplně vychladnout. Pak odstraň uvolněnou zuhelnatělou část knotu a všechny úlomky vyber z vosku. Jak na to u dřevěného knotu, popisujeme v článku <a href="/cteni/dreveny-knot/">Jak pečovat o dřevěný knot</a>.</p><p>Před dalším zapálením přesuň svíčku mimo průvan, ventilátor, otevřené okno nebo místo, kudy se často chodí.</p>'],
       ['Jak udržet nádobu čistou', '<p>Černé stopy na vnitřní stěně nádoby otírej až po vychladnutí, suchým měkkým hadříkem nebo papírovou utěrkou. Dokud je ve svíčce vosk, nepoužívej vodu ani čisticí prostředky.</p><p>Nejlepší prevencí je klidný plamen: upravený knot, místo bez průvanu a hoření jen tak dlouho, jak uvádí návod. Pokud svíčka čadí i potom, ozvi se nám.</p>'],
     ],
-    takeaway: 'Čadící plamen je signál. Zhasnout, nechat vychladnout, očistit knot a najít klidnější místo.',
+    takeaway: 'Když svíčka čadí, zhasni ji, nech vychladnout, očisti knot a najdi jí klidnější místo.',
     related: 'druhy-zivot-nadoby',
   },
   {
