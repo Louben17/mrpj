@@ -175,6 +175,48 @@
     "kind": "AI-generated article illustration (no MRPJ product shown)"
   },
   {
+    "file": "cteni-svicky-a-zdravi.webp",
+    "variants": [
+      "cteni-svicky-a-zdravi-800.webp"
+    ],
+    "source": "Generated with gpt-image-2.5-flare via scripts/generate-illustrations.mjs",
+    "prompt": "Editorial still life photograph in a calm, minimal series: objects on a warm cream linen tablecloth. Soft diffused morning daylight from the left with gentle window-shadow streaks, warm minimal palette of cream, ivory, beige and soft brown. Objects placed in the left third, generous empty linen space on the right. Shot from about 45 degrees above, 85mm lens, shallow depth of field, natural photographic texture. Scene: a single sprig of fresh eucalyptus, a small white feather and a neatly folded oatmeal linen napkin. Strictly no candles, no candle jars or candle vessels, no flame, no smoke, no text, no letters, no logos, no people, no hands.",
+    "generated": "2026-10-12T03:11:09.905Z",
+    "description": "Snítka eukalyptu, bílé pírko a složený lněný ubrousek na lněném ubrusu. Ilustrace k článku Jsou svíčky škodlivé? Co víme o kouři a vzduchu doma.",
+    "retrieved": "2026-10-05",
+    "width": 1536,
+    "height": 1024,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
+    "file": "cteni-vosk-z-latky.webp",
+    "variants": [
+      "cteni-vosk-z-latky-800.webp"
+    ],
+    "source": "Generated with gpt-image-2.5-flare via scripts/generate-illustrations.mjs",
+    "prompt": "Editorial still life photograph in a calm, minimal series: objects on a warm cream linen tablecloth. Soft diffused morning daylight from the left with gentle window-shadow streaks, warm minimal palette of cream, ivory, beige and soft brown. Objects placed in the left third, generous empty linen space on the right. Shot from about 45 degrees above, 85mm lens, shallow depth of field, natural photographic texture. Scene: a small blunt butter knife, a neatly folded white paper towel, a small speckled ceramic bowl with a few ice cubes, and a folded piece of cream cotton fabric. Strictly no candles, no candle jars or candle vessels, no flame, no smoke, no text, no letters, no logos, no people, no hands.",
+    "generated": "2026-10-12T03:11:20.739Z",
+    "description": "Tupý nůž, složená papírová utěrka, miska s kostkami ledu a složená bavlněná látka. Ilustrace k článku Jak odstranit vosk z oblečení, ubrusu i koberce.",
+    "retrieved": "2026-10-05",
+    "width": 1536,
+    "height": 1024,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
+    "file": "cteni-praskajici-knot.webp",
+    "variants": [
+      "cteni-praskajici-knot-800.webp"
+    ],
+    "source": "Generated with gpt-image-2.5-flare via scripts/generate-illustrations.mjs",
+    "prompt": "Editorial still life photograph in a calm, minimal series: objects on a warm cream linen tablecloth. Soft diffused morning daylight from the left with gentle window-shadow streaks, warm minimal palette of cream, ivory, beige and soft brown. Objects placed in the left third, generous empty linen space on the right. Shot from about 45 degrees above, 85mm lens, shallow depth of field, natural photographic texture. Scene: a few short split pieces of light natural wood showing fine grain, a single thin flat wooden wick strip and one long unlit wooden match. Strictly no candles, no candle jars or candle vessels, no flame, no smoke, no text, no letters, no logos, no people, no hands.",
+    "generated": "2026-10-12T03:11:30.966Z",
+    "description": "Několik štípaných kousků světlého dřeva, tenký plochý dřevěný knot a dlouhá zápalka. Ilustrace k článku Proč dřevěný knot praská a jak ho správně zapálit.",
+    "retrieved": "2026-10-05",
+    "width": 1536,
+    "height": 1024,
+    "kind": "AI-generated article illustration (no MRPJ product shown)"
+  },
+  {
     "file": "mrpj-reel-vyroba.mp4",
     "variants": [
       "mrpj-reel-vyroba.webp"
